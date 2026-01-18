@@ -50,6 +50,8 @@
 		VW016 /* TransactionFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW016; };
 		UTL006 /* TransferDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL006; };
 		UTL007 /* IncomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL007; };
+		UTL008 /* RuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL008; };
+		MDL003 /* ClassificationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMDL003; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -66,6 +68,7 @@
 		TST012 /* TransactionFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST012; };
 		TST013 /* TransferDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST013; };
 		TST014 /* IncomeDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST014; };
+		TST015 /* RuleEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST015; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,8 @@
 		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
 		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
 		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
+		SRCUTL008 /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
+		SRCMDL003 /* ClassificationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationRule.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 		SRCTST012 /* TransactionFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterTests.swift; sourceTree = "<group>"; };
 		SRCTST013 /* TransferDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetectorTests.swift; sourceTree = "<group>"; };
 		SRCTST014 /* IncomeDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetectorTests.swift; sourceTree = "<group>"; };
+		SRCTST015 /* RuleEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngineTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -192,6 +198,7 @@
 				SRCTST012 /* TransactionFilterTests.swift */,
 				SRCTST013 /* TransferDetectorTests.swift */,
 				SRCTST014 /* IncomeDetectorTests.swift */,
+				SRCTST015 /* RuleEngineTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -283,6 +290,7 @@
 				SRCMOD002 /* Transaction.swift */,
 				SRCMOD003 /* Organization.swift */,
 				SRCMOD004 /* Category.swift */,
+				SRCMDL003 /* ClassificationRule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 				SRCUTL005 /* TransactionFilter.swift */,
 				SRCUTL006 /* TransferDetector.swift */,
 				SRCUTL007 /* IncomeDetector.swift */,
+				SRCUTL008 /* RuleEngine.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -455,6 +464,8 @@
 				VW016 /* TransactionFilterSheet.swift in Sources */,
 				UTL006 /* TransferDetector.swift in Sources */,
 				UTL007 /* IncomeDetector.swift in Sources */,
+				UTL008 /* RuleEngine.swift in Sources */,
+				MDL003 /* ClassificationRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +487,7 @@
 				TST012 /* TransactionFilterTests.swift in Sources */,
 				TST013 /* TransferDetectorTests.swift in Sources */,
 				TST014 /* IncomeDetectorTests.swift in Sources */,
+				TST015 /* RuleEngineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

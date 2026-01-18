@@ -384,7 +384,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Rule creation from 'Apply to all' action",
     "Unit tests for priority resolution"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 
