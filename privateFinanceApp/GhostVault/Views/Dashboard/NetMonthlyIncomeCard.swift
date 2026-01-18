@@ -30,35 +30,11 @@ struct NetMonthlyIncomeCard: View {
     private var mainCardContent: some View {
         VStack(spacing: 12) {
             // Month selector
-            HStack {
-                Button {
-                    withAnimation {
-                        selectedMonth = MonthlyIncomeCalculator.previousMonth(from: selectedMonth)
-                    }
-                } label: {
-                    Image(systemName: "chevron.left.circle.fill")
-                        .font(.title2)
-                        .foregroundStyle(.accent)
-                }
-
-                Spacer()
-
-                Text(monthInfo.displayString)
-                    .font(.headline)
-
-                Spacer()
-
-                Button {
-                    withAnimation {
-                        selectedMonth = MonthlyIncomeCalculator.nextMonth(from: selectedMonth)
-                    }
-                } label: {
-                    Image(systemName: "chevron.right.circle.fill")
-                        .font(.title2)
-                        .foregroundStyle(canGoForward ? .accent : .secondary.opacity(0.3))
-                }
-                .disabled(!canGoForward)
-            }
+            MonthSelectorView(
+                selectedMonth: $selectedMonth,
+                monthDisplayString: monthInfo.displayString,
+                canGoForward: canGoForward
+            )
 
             // Net income display
             VStack(spacing: 4) {
