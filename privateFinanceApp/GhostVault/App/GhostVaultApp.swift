@@ -20,10 +20,12 @@ struct GhostVaultApp: App {
             Organization.self,
             Category.self,
         ])
+
+        // Use local-only storage for now to avoid CloudKit auth issues
+        // CloudKit sync can be enabled later with proper provisioning
         let modelConfiguration = ModelConfiguration(
             schema: schema,
-            isStoredInMemoryOnly: false,
-            cloudKitDatabase: .private("iCloud.com.ghostvault.app")
+            isStoredInMemoryOnly: false
         )
 
         do {

@@ -19,8 +19,8 @@ actor SimpleFINService {
     /// The setup token is base64-encoded and contains the claim URL
     func claimSetupToken(_ setupToken: String) async throws -> String {
         // Step 1: Base64 decode the setup token to get the claim URL
-        guard let data = Data(base64Encoded: setupToken),
-              let claimURL = String(data: data, encoding: .utf8),
+        guard let tokenData = Data(base64Encoded: setupToken),
+              let claimURL = String(data: tokenData, encoding: .utf8),
               let url = URL(string: claimURL) else {
             throw SimpleFINError.invalidSetupToken
         }
@@ -30,7 +30,7 @@ actor SimpleFINService {
         request.httpMethod = "POST"
         request.setValue("0", forHTTPHeaderField: "Content-Length")
 
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (responseData, response) = try await URLSession.shared.data(for: request)
 
         guard let httpResponse = response as? HTTPURLResponse else {
             throw SimpleFINError.invalidResponse
@@ -38,7 +38,7 @@ actor SimpleFINService {
 
         switch httpResponse.statusCode {
         case 200:
-            guard let accessURL = String(data: data, encoding: .utf8) else {
+            guard let accessURL = String(data: responseData, encoding: .utf8) else {
                 throw SimpleFINError.invalidResponse
             }
             return accessURL
