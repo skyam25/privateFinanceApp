@@ -1,15 +1,17 @@
 # Project Canvas: "GhostVault" (Working Title)
 
-**Concept:** A "Local-First" Net Worth & Spend Tracker
-**Core Promise:** The automation of Mint with the privacy of a spreadsheet.
+**Concept:** A simple, private net worth and income tracker
+**Core Promise:** See your net worth and monthly income at a glance, with complete privacy.
 
 ---
 
 ## 1. Executive Summary
 
-**The Problem:** Users are forced to choose between **convenience** (selling their data to cloud apps like Mint/Monarch) or **privacy** (laborious manual entry in spreadsheets/GnuCash).
+**The Problem:** Users want a simple way to see their net worth and monthly income without complex budgeting tools or giving up their financial privacy.
 
-**The Solution:** A mobile app that acts as a secure "viewer" for your finances. It uses a paid bridge (SimpleFIN) to fetch data but stores 100% of that data in the user's private iCloud container. The developer never sees a single transaction.
+**The Solution:** A focused mobile app that connects to your bank accounts via SimpleFIN and shows you two key numbers: your **net worth** and your **net monthly income**. All data stays on your device and in your private iCloud container.
+
+**Core Requirement:** SimpleFIN connection is mandatory. This app requires a SimpleFIN subscription to function.
 
 ---
 
@@ -51,23 +53,36 @@ The market is polarized. GhostVault targets the "Hybrid" gap.
 
 ---
 
-## 4. UX Strategy: "The Trust Flow"
+## 4. UX Strategy: Streamlined Onboarding
 
-Since we cannot white-label SimpleFIN, we turn the friction into a feature.
+SimpleFIN is required to use this app. The onboarding flow guides users through setup quickly.
 
-### The Onboarding "Handshake"
+### Onboarding Flow
 
-1. **The Pitch:** "We don't want your bank password. We use a secure bridge called SimpleFIN."
+**Step 1: Welcome**
+- Brief intro to GhostVault
+- Explain that SimpleFIN connection is required
+- "Get Started" button
 
-2. **The Handoff:**
-   - Button: `Get Secure Key ($15/yr)` → Opens SFSafariViewController to SimpleFIN.org
-   - *User Action:* User signs up, connects banks on SimpleFIN's site
-   - *User Action:* User copies the "Setup Token"
+**Step 2: SimpleFIN Setup**
+- Explain what SimpleFIN is (secure bank connection bridge)
+- Two paths:
+  - "I have a SimpleFIN token" → Go to token entry
+  - "I need a SimpleFIN account" → Open SimpleFIN.org in browser
+- Token entry field with paste support
+- Validate and claim token
+- **Success:** "Connected! Syncing your accounts..."
 
-3. **The Return:**
-   - User closes Safari view
-   - App detects token on clipboard (or user presses "Paste Token")
-   - **Success:** "Connected! Downloading 12 months of history..."
+**Step 3: Account Setup**
+- Display list of accounts found from SimpleFIN
+- User can see account names, types, and balances
+- Option to hide/exclude accounts from totals
+- "Continue to Dashboard" button
+
+**Step 4: Dashboard**
+- User lands on main dashboard showing:
+  - **Net Worth** (total assets minus liabilities)
+  - **Net Monthly Income** (income minus expenses for current month)
 
 ---
 
@@ -91,50 +106,46 @@ Avoid reselling the data feed. It lowers liability and increases trust.
 
 ## 6. MVP Roadmap (Phase 1)
 
-Focus on "Net Worth" first, "Budgeting" second.
+Keep it simple. Focus on two key metrics: **Net Worth** and **Net Monthly Income**.
 
 ### MVP Features
 
-#### 1. The Dashboard
-- [ ] Total Net Worth card (Assets - Liabilities)
-- [ ] "Safe to Spend" daily number (Income - Fixed Costs)
-- [ ] Last sync timestamp and manual refresh
+#### 1. Onboarding Flow
+- [ ] Welcome screen explaining SimpleFIN requirement
+- [ ] SimpleFIN token entry with validation
+- [ ] Account discovery and setup
+- [ ] Smooth transition to dashboard
 
-#### 2. Account Management
-- [ ] List of all connected accounts
+#### 2. The Dashboard (Primary Focus)
+- [ ] **Net Worth** - Total assets minus liabilities, prominently displayed
+- [ ] **Net Monthly Income** - Income minus expenses for current month
+- [ ] Last sync timestamp
+- [ ] Manual refresh button
+
+#### 3. Account Management
+- [ ] List of all connected accounts from SimpleFIN
 - [ ] Account balance and type display
-- [ ] Group by institution
+- [ ] Ability to hide/exclude accounts from calculations
 
-#### 3. Transaction Feed
-- [ ] Unified transaction list from all SimpleFIN accounts
-- [ ] Search and filter functionality
-- [ ] Basic auto-categorization (Regex rules stored locally)
+#### 4. Transaction View
+- [ ] Simple transaction list from all accounts
+- [ ] Basic search functionality
 
-#### 4. Settings & Connection
-- [ ] SimpleFIN token entry flow
-- [ ] Connection status display
-- [ ] Disconnect/reconnect capability
+#### 5. Settings
+- [ ] SimpleFIN connection status
+- [ ] Reconnect/update token capability
 
-### Future Phases
+### Future Phases (Post-MVP)
 
-#### Phase 2: Enhanced Tracking
-- [ ] Asset Classes
-  - Real Estate (Zillow API or Manual Estimate)
-  - Vehicles (Manual Depreciation curve)
-  - Crypto/Stocks (Public API for pricing)
-- [ ] Spending trends and charts
-- [ ] Monthly reports
+#### Phase 2: Enhanced Views
+- [ ] Monthly income/expense trends
+- [ ] Account grouping by institution
+- [ ] Transaction categorization
 
-#### Phase 3: Budgeting
-- [ ] Budget categories
-- [ ] Spending limits
-- [ ] Alerts and notifications
-
-#### Phase 4: Advanced Features
-- [ ] Export to CSV/JSON
-- [ ] Recurring transaction detection
-- [ ] Bill reminders
-- [ ] Multi-currency support
+#### Phase 3: Additional Features
+- [ ] Manual asset tracking (real estate, vehicles)
+- [ ] Export functionality
+- [ ] Spending insights
 
 ---
 
@@ -200,14 +211,16 @@ CategoryRule {
 ## 8. Success Metrics
 
 ### MVP Success Criteria
-- [ ] User can connect SimpleFIN and see accounts
-- [ ] Transactions sync successfully
+- [ ] User can complete SimpleFIN onboarding in under 5 minutes
+- [ ] Net worth displays correctly (assets - liabilities)
+- [ ] Net monthly income calculates correctly (income - expenses)
+- [ ] Accounts sync successfully from SimpleFIN
 - [ ] Data persists across app restarts
 - [ ] Data syncs across devices via iCloud
 
 ### Key Performance Indicators
-- User retention at 30 days
-- Average session duration
+- Onboarding completion rate
+- Daily active users checking net worth
 - Sync success rate
 - App Store rating
 
@@ -215,11 +228,9 @@ CategoryRule {
 
 ## 9. Open Questions
 
-1. **Pricing Model:** Subscription vs. one-time purchase vs. freemium?
+1. **Pricing Model:** Subscription vs. one-time purchase?
 2. **App Name:** "GhostVault" or something else?
-3. **Asset Tracking:** Include manual assets (real estate, vehicles) in MVP or Phase 2?
-4. **Widgets:** iOS home screen widgets for net worth display?
-5. **Mac App:** Universal app with Mac Catalyst or dedicated macOS app?
+3. **Widgets:** iOS home screen widgets for net worth display in future phase?
 
 ---
 
