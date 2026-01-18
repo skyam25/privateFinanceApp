@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P4 - Transaction View
-- **Current Task:** P4-T1 (next)
+- **Current Task:** P4-T2 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -295,6 +295,22 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
 
 ---
 
+### P4-T1: Transaction List
+- Status: COMPLETE
+- Files modified:
+  - GhostVault/Models/Transaction.swift (added classificationReason, isIgnored, classificationType)
+  - GhostVault/Views/Transactions/TransactionsView.swift (complete rewrite with list)
+- Notes:
+  - Chronological list with date section headers (Today, Yesterday, day names, dates)
+  - Pending transactions at top with dashed orange border
+  - Classification badges (Income/Expense/Transfer/Ignored) with colors
+  - Classification reason displayed (Default, Payee Rule, Auto-Transfer, Manual)
+  - TransactionListRowView with category icons and formatted amounts
+  - SwiftUI previews with sample transactions
+  - Build and 192 tests pass
+
+---
+
 ## In Progress
 
 (none)
@@ -311,7 +327,7 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 14 (P0 complete, P1 complete, P2 complete, P3 complete)
+- Completed: 15 (P0 complete, P1 complete, P2 complete, P3 complete, P4-T1)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 192 passing

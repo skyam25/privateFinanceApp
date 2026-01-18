@@ -303,7 +303,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Shows classification reason (rule name or 'Default')",
     "SwiftUI preview with sample transactions"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

@@ -19,8 +19,26 @@ final class Transaction {
     var memo: String?
     var pending: Bool
     var category: String?
+    var classificationReason: String? // "Default", "Payee Rule: [name]", "Auto-Transfer", etc.
+    var isIgnored: Bool // Exclude from calculations
 
     // Computed properties
+
+    /// Classification type for display badges
+    var classificationType: ClassificationType {
+        if isIgnored { return .ignored }
+        guard let cat = category?.lowercased() else {
+            return amountValue >= 0 ? .income : .expense
+        }
+        switch cat {
+        case "income", "salary", "payroll":
+            return .income
+        case "transfer":
+            return .transfer
+        default:
+            return amountValue >= 0 ? .income : .expense
+        }
+    }
     var amountValue: Decimal {
         Decimal(string: amount) ?? 0
     }
@@ -41,7 +59,9 @@ final class Transaction {
         payee: String? = nil,
         memo: String? = nil,
         pending: Bool = false,
-        category: String? = nil
+        category: String? = nil,
+        classificationReason: String? = "Default",
+        isIgnored: Bool = false
     ) {
         self.id = id
         self.accountId = accountId
@@ -52,6 +72,8 @@ final class Transaction {
         self.memo = memo
         self.pending = pending
         self.category = category
+        self.classificationReason = classificationReason
+        self.isIgnored = isIgnored
     }
 
     // Initialize from SimpleFIN API response
@@ -67,6 +89,44 @@ final class Transaction {
             pending: apiTransaction.pending ?? false,
             category: nil // Will be categorized by local rules
         )
+    }
+}
+
+// MARK: - Classification Type
+
+import SwiftUI
+
+enum ClassificationType: String, CaseIterable {
+    case income
+    case expense
+    case transfer
+    case ignored
+
+    var displayName: String {
+        switch self {
+        case .income: return "Income"
+        case .expense: return "Expense"
+        case .transfer: return "Transfer"
+        case .ignored: return "Ignored"
+        }
+    }
+
+    var color: Color {
+        switch self {
+        case .income: return .green
+        case .expense: return .red
+        case .transfer: return .blue
+        case .ignored: return .gray
+        }
+    }
+
+    var iconName: String {
+        switch self {
+        case .income: return "arrow.down.circle.fill"
+        case .expense: return "arrow.up.circle.fill"
+        case .transfer: return "arrow.left.arrow.right.circle.fill"
+        case .ignored: return "minus.circle.fill"
+        }
     }
 }
 
