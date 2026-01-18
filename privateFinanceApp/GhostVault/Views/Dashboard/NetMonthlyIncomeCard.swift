@@ -14,6 +14,7 @@ struct NetMonthlyIncomeCard: View {
     @State private var selectedMonth: Date = Date()
     @State private var isExpanded = false
     @State private var showChart = false
+    @State private var showCategories = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -138,26 +139,51 @@ struct NetMonthlyIncomeCard: View {
             Divider()
                 .padding(.vertical, 8)
 
-            // View Trend Chart button
-            Button {
-                showChart = true
-            } label: {
-                HStack {
-                    Image(systemName: "chart.bar")
-                    Text("View Trend Chart")
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+            // View buttons
+            HStack(spacing: 16) {
+                // View Categories button
+                Button {
+                    showCategories = true
+                } label: {
+                    HStack {
+                        Image(systemName: "chart.pie")
+                        Text("Categories")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .foregroundStyle(.accent)
                 }
-                .foregroundStyle(.accent)
+                .buttonStyle(.plain)
+
+                Divider()
+                    .frame(height: 20)
+
+                // View Trend Chart button
+                Button {
+                    showChart = true
+                } label: {
+                    HStack {
+                        Image(systemName: "chart.bar")
+                        Text("Trends")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .foregroundStyle(.accent)
+                }
+                .buttonStyle(.plain)
             }
-            .buttonStyle(.plain)
         }
         .padding(.top, 12)
         .font(.subheadline)
         .navigationDestination(isPresented: $showChart) {
             IncomeExpenseChartView()
+        }
+        .navigationDestination(isPresented: $showCategories) {
+            CategoryBreakdownView()
         }
     }
 

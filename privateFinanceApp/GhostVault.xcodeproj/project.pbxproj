@@ -56,6 +56,7 @@
 		MOD007 /* MonthlySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD007; };
 		VW017 /* NetWorthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW017; };
 		VW018 /* IncomeExpenseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW018; };
+		VW019 /* CategoryBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW019; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -133,6 +134,7 @@
 		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
 		SRCVW017 /* NetWorthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthChartView.swift; sourceTree = "<group>"; };
 		SRCVW018 /* IncomeExpenseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseChartView.swift; sourceTree = "<group>"; };
+		SRCVW019 /* CategoryBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBreakdownView.swift; sourceTree = "<group>"; };
 		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
 		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
 		SRCUTL008 /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				GRPVWONB /* Onboarding */,
 				GRPVWCOMP /* Components */,
 				GRPVWCHRT /* Charts */,
+				GRPVWCAT /* Categories */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,14 @@
 				SRCVW018 /* IncomeExpenseChartView.swift */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		GRPVWCAT /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW019 /* CategoryBreakdownView.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		GRPMODELS /* Models */ = {
@@ -493,6 +504,7 @@
 				MOD007 /* MonthlySnapshot.swift in Sources */,
 				VW017 /* NetWorthChartView.swift in Sources */,
 				VW018 /* IncomeExpenseChartView.swift in Sources */,
+				VW019 /* CategoryBreakdownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
