@@ -36,6 +36,7 @@
 		TST002 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST002; };
 		TST003 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST003; };
 		TST004 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST004; };
+		TST005 /* SimpleFINServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST005; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		SRCTST002 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		SRCTST003 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		SRCTST004 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
+		SRCTST005 /* SimpleFINServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -122,6 +124,7 @@
 				SRCTST002 /* AccountTests.swift */,
 				SRCTST003 /* TransactionTests.swift */,
 				SRCTST004 /* CategoryTests.swift */,
+				SRCTST005 /* SimpleFINServiceTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				TST002 /* AccountTests.swift in Sources */,
 				TST003 /* TransactionTests.swift in Sources */,
 				TST004 /* CategoryTests.swift in Sources */,
+				TST005 /* SimpleFINServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

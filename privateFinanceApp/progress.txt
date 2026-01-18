@@ -1,9 +1,15 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P0 - Test Infrastructure
-- **Current Task:** P0-T3
+- **Phase:** P0 - Test Infrastructure COMPLETE
+- **Current Task:** P1-T1 (next)
 - **Last Updated:** 2026-01-17
+
+---
+
+## Phase 0 Complete - 2026-01-17
+
+All test infrastructure is in place with 77 passing tests.
 
 ---
 
@@ -39,21 +45,32 @@
   - AccountTests: balance value parsing, available balance, account type classification
   - TransactionTests: amount parsing, category icons for all categories, initialization
   - CategoryTests: pattern matching (contains, startsWith, endsWith, regex), field matching, Color extension, Codable/Hashable conformance
-  - All 62 tests pass
+
+### P0-T3: SimpleFIN Service Tests
+- Status: COMPLETE
+- Files created:
+  - GhostVaultTests/SimpleFINServiceTests.swift (15 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj (added test file)
+- Tests added: 15
+- Notes:
+  - Token validation tests (invalid base64, empty token, whitespace)
+  - SimpleFINError description tests for all error cases
+  - SimpleFIN model decoding tests (accounts, transactions, holdings, organizations)
+  - Account type inference from name tests
+  - Model initialization from API response tests
 
 ---
 
 ## In Progress
 
-### P0-T3: SimpleFIN Service Tests
-- Started: 2026-01-17
-- Current step: Writing unit tests for SimpleFINService with mocked responses
+(starting Phase 1 next)
 
 ---
 
 ## Blocked Tasks
 
-(none yet)
+(none)
 
 ---
 
@@ -61,5 +78,7 @@
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
+- Completed: 3 (P0 complete)
 - Phases: P0-P9
-- Simulator: iPhone 17 (not iPhone 16)
+- Simulator: iPhone 17
+- Total tests: 77 passing
