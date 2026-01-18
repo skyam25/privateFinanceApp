@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P4 - Transaction View
-- **Current Task:** P4-T2 (next)
+- **Current Task:** P4-T3 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -309,6 +309,22 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
   - SwiftUI previews with sample transactions
   - Build and 192 tests pass
 
+### P4-T2: Transaction Detail Sheet
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Transactions/TransactionDetailSheet.swift
+- Files modified:
+  - GhostVault/Views/Transactions/TransactionsView.swift (added sheet presentation)
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - Transaction detail bottom sheet with full info display
+  - Category picker sheet for changing classification
+  - Apply to all from payee toggle for bulk updates
+  - Ignore transaction toggle to exclude from calculations
+  - Changes persist to SwiftData automatically
+  - SwiftUI previews for different transaction types
+  - Build and 192 tests pass
+
 ---
 
 ## In Progress
@@ -327,7 +343,7 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 15 (P0 complete, P1 complete, P2 complete, P3 complete, P4-T1)
+- Completed: 16 (P0 complete, P1 complete, P2 complete, P3 complete, P4-T1, P4-T2)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 192 passing

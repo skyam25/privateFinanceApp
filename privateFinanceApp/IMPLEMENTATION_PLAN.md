@@ -320,7 +320,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "'Ignore this transaction' option",
     "Changes persist to SwiftData"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

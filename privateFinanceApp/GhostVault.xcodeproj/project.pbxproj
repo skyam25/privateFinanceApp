@@ -45,6 +45,7 @@
 		VW013 /* SyncStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW013; };
 		VW014 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW014; };
 		UTL004 /* AccountBalanceDelta.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL004; };
+		VW015 /* TransactionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW015; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -112,6 +113,7 @@
 		SRCVW013 /* SyncStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusBar.swift; sourceTree = "<group>"; };
 		SRCVW014 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
 		SRCUTL004 /* AccountBalanceDelta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceDelta.swift; sourceTree = "<group>"; };
+		SRCVW015 /* TransactionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailSheet.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				SRCVW003 /* TransactionsView.swift */,
+				SRCVW015 /* TransactionDetailSheet.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				UTL003 /* SyncRateLimiter.swift in Sources */,
 				VW014 /* AccountDetailView.swift in Sources */,
 				UTL004 /* AccountBalanceDelta.swift in Sources */,
+				VW015 /* TransactionDetailSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

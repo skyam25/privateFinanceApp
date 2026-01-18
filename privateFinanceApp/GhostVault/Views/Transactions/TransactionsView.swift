@@ -12,6 +12,8 @@ struct TransactionsView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Transaction.posted, order: .reverse) private var transactions: [Transaction]
 
+    @State private var selectedTransaction: Transaction?
+
     var body: some View {
         NavigationStack {
             Group {
@@ -22,6 +24,9 @@ struct TransactionsView: View {
                 }
             }
             .navigationTitle("Transactions")
+            .sheet(item: $selectedTransaction) { transaction in
+                TransactionDetailSheet(transaction: transaction)
+            }
         }
     }
 
@@ -43,13 +48,18 @@ struct TransactionsView: View {
             if !pendingTransactions.isEmpty {
                 Section {
                     ForEach(pendingTransactions) { transaction in
-                        TransactionListRowView(transaction: transaction)
-                            .listRowBackground(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .strokeBorder(style: StrokeStyle(lineWidth: 1, dash: [5]))
-                                    .foregroundStyle(.orange.opacity(0.5))
-                                    .background(Color(.systemBackground))
-                            )
+                        Button {
+                            selectedTransaction = transaction
+                        } label: {
+                            TransactionListRowView(transaction: transaction)
+                        }
+                        .buttonStyle(.plain)
+                        .listRowBackground(
+                            RoundedRectangle(cornerRadius: 8)
+                                .strokeBorder(style: StrokeStyle(lineWidth: 1, dash: [5]))
+                                .foregroundStyle(.orange.opacity(0.5))
+                                .background(Color(.systemBackground))
+                        )
                     }
                 } header: {
                     HStack {
@@ -65,7 +75,12 @@ struct TransactionsView: View {
             ForEach(groupedTransactions, id: \.key) { group in
                 Section {
                     ForEach(group.value) { transaction in
-                        TransactionListRowView(transaction: transaction)
+                        Button {
+                            selectedTransaction = transaction
+                        } label: {
+                            TransactionListRowView(transaction: transaction)
+                        }
+                        .buttonStyle(.plain)
                     }
                 } header: {
                     Text(formatDateHeader(group.key))
