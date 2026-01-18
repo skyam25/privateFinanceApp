@@ -35,6 +35,12 @@
 - Technique: Static dictionary lookup (categoryColorMap) replacing switch statement
 - Tests: BUILD SUCCEEDED
 
-Remaining violations after iteration 5: 2
-- SimpleFINServiceTests.swift:655 (complexity 12)
+## Iteration 6
+- Violations found: 2
+- Fixed: SimpleFINServiceTests.swift - SimpleFINError.== operator
+- Original complexity: 12 → New: 3 (below threshold)
+- Technique: Consolidated identical return cases into single comma-separated case arm
+- Tests: PASS
+
+Remaining violations after iteration 6: 1
 - ClassificationReviewView.swift:339 (complexity 11)
