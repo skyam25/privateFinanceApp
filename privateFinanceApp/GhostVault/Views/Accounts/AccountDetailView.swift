@@ -372,12 +372,7 @@ struct TransactionRowView: View {
     }
 
     private var formattedAmount: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-
-        let value = transaction.amountValue
-        return formatter.string(from: value as NSDecimalNumber) ?? "$0.00"
+        CurrencyFormatter.format(transaction.amountValue, maximumFractionDigits: 2)
     }
 
     private var amountColor: Color {

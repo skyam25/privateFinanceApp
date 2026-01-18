@@ -69,26 +69,16 @@ struct TransactionsView: View {
     // MARK: - Empty State
 
     private var emptyState: some View {
-        ContentUnavailableView {
-            Label("No Transactions", systemImage: "list.bullet.rectangle.fill")
-        } description: {
-            Text("Transactions will appear here after syncing with SimpleFIN")
-        }
+        NoTransactionsEmptyState()
     }
 
     // MARK: - No Results State
 
     private var noResultsState: some View {
-        ContentUnavailableView {
-            Label("No Results", systemImage: "magnifyingglass")
-        } description: {
-            Text("No transactions match your current filters")
-        } actions: {
-            Button("Clear Filters") {
-                searchText = ""
-                selectedQuickFilter = .all
-                filterOptions = TransactionFilter.Options()
-            }
+        NoTransactionsEmptyState(isFiltered: true) {
+            searchText = ""
+            selectedQuickFilter = .all
+            filterOptions = TransactionFilter.Options()
         }
     }
 
@@ -280,12 +270,7 @@ struct TransactionListRowView: View {
     }
 
     private var formattedAmount: String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-
-        let value = transaction.amountValue
-        return formatter.string(from: value as NSDecimalNumber) ?? "$0.00"
+        CurrencyFormatter.format(transaction.amountValue, maximumFractionDigits: 2)
     }
 
     private var amountColor: Color {

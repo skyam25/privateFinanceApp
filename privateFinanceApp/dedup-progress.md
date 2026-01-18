@@ -34,4 +34,10 @@
 - Clones: 9 found, 131 lines duplicated
 - Fixed: NetMonthlyIncomeCard.swift inline month selector → MonthSelectorView
 - Tests: BUILD SUCCEEDED
+- Remaining: 8 clones
+
+## Iteration 7
+- Clones: 8 found, 115 lines duplicated
+- Fixed: AccountDetailView.swift + TransactionsView.swift formattedAmount → CurrencyFormatter.format
+- Tests: BUILD SUCCEEDED
 - Remaining: expecting fewer clones
