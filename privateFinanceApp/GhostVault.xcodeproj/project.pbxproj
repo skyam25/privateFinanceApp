@@ -46,6 +46,8 @@
 		VW014 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW014; };
 		UTL004 /* AccountBalanceDelta.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL004; };
 		VW015 /* TransactionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW015; };
+		UTL005 /* TransactionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL005; };
+		VW016 /* TransactionFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW016; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -59,6 +61,7 @@
 		TST009 /* MonthlyIncomeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST009; };
 		TST010 /* SyncRateLimiterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST010; };
 		TST011 /* AccountBalanceDeltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST011; };
+		TST012 /* TransactionFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST012; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,8 @@
 		SRCVW014 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
 		SRCUTL004 /* AccountBalanceDelta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceDelta.swift; sourceTree = "<group>"; };
 		SRCVW015 /* TransactionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailSheet.swift; sourceTree = "<group>"; };
+		SRCUTL005 /* TransactionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilter.swift; sourceTree = "<group>"; };
+		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 		SRCTST009 /* MonthlyIncomeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyIncomeCalculatorTests.swift; sourceTree = "<group>"; };
 		SRCTST010 /* SyncRateLimiterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncRateLimiterTests.swift; sourceTree = "<group>"; };
 		SRCTST011 /* AccountBalanceDeltaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceDeltaTests.swift; sourceTree = "<group>"; };
+		SRCTST012 /* TransactionFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -175,6 +181,7 @@
 				SRCTST009 /* MonthlyIncomeCalculatorTests.swift */,
 				SRCTST010 /* SyncRateLimiterTests.swift */,
 				SRCTST011 /* AccountBalanceDeltaTests.swift */,
+				SRCTST012 /* TransactionFilterTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 			children = (
 				SRCVW003 /* TransactionsView.swift */,
 				SRCVW015 /* TransactionDetailSheet.swift */,
+				SRCVW016 /* TransactionFilterSheet.swift */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 				SRCUTL002 /* MonthlyIncomeCalculator.swift */,
 				SRCUTL003 /* SyncRateLimiter.swift */,
 				SRCUTL004 /* AccountBalanceDelta.swift */,
+				SRCUTL005 /* TransactionFilter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -430,6 +439,8 @@
 				VW014 /* AccountDetailView.swift in Sources */,
 				UTL004 /* AccountBalanceDelta.swift in Sources */,
 				VW015 /* TransactionDetailSheet.swift in Sources */,
+				UTL005 /* TransactionFilter.swift in Sources */,
+				VW016 /* TransactionFilterSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +459,7 @@
 				TST009 /* MonthlyIncomeCalculatorTests.swift in Sources */,
 				TST010 /* SyncRateLimiterTests.swift in Sources */,
 				TST011 /* AccountBalanceDeltaTests.swift in Sources */,
+				TST012 /* TransactionFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

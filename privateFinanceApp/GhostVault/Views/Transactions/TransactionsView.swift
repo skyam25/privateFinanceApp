@@ -11,21 +11,57 @@ import SwiftData
 struct TransactionsView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Transaction.posted, order: .reverse) private var transactions: [Transaction]
+    @Query private var accounts: [Account]
 
     @State private var selectedTransaction: Transaction?
+    @State private var searchText = ""
+    @State private var selectedQuickFilter: TransactionFilter.QuickFilter = .all
+    @State private var showFilterSheet = false
+    @State private var filterOptions = TransactionFilter.Options()
+
+    private var filteredTransactions: [Transaction] {
+        var options = filterOptions
+        options.searchText = searchText
+        options.quickFilter = selectedQuickFilter
+        return TransactionFilter.apply(options, to: transactions)
+    }
 
     var body: some View {
         NavigationStack {
-            Group {
-                if transactions.isEmpty {
-                    emptyState
-                } else {
-                    transactionsList
+            VStack(spacing: 0) {
+                if !transactions.isEmpty {
+                    quickFilterPills
+                }
+
+                Group {
+                    if transactions.isEmpty {
+                        emptyState
+                    } else if filteredTransactions.isEmpty {
+                        noResultsState
+                    } else {
+                        transactionsList
+                    }
                 }
             }
             .navigationTitle("Transactions")
+            .searchable(text: $searchText, prompt: "Search transactions")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showFilterSheet = true
+                    } label: {
+                        Image(systemName: filterOptions.isEmpty ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+                    }
+                }
+            }
             .sheet(item: $selectedTransaction) { transaction in
                 TransactionDetailSheet(transaction: transaction)
+            }
+            .sheet(isPresented: $showFilterSheet) {
+                TransactionFilterSheet(
+                    options: $filterOptions,
+                    accounts: accounts
+                )
             }
         }
     }
@@ -37,6 +73,51 @@ struct TransactionsView: View {
             Label("No Transactions", systemImage: "list.bullet.rectangle.fill")
         } description: {
             Text("Transactions will appear here after syncing with SimpleFIN")
+        }
+    }
+
+    // MARK: - No Results State
+
+    private var noResultsState: some View {
+        ContentUnavailableView {
+            Label("No Results", systemImage: "magnifyingglass")
+        } description: {
+            Text("No transactions match your current filters")
+        } actions: {
+            Button("Clear Filters") {
+                searchText = ""
+                selectedQuickFilter = .all
+                filterOptions = TransactionFilter.Options()
+            }
+        }
+    }
+
+    // MARK: - Quick Filter Pills
+
+    private var quickFilterPills: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(TransactionFilter.QuickFilter.allCases, id: \.self) { filter in
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            selectedQuickFilter = filter
+                        }
+                    } label: {
+                        Text(filter.rawValue)
+                            .font(.subheadline.weight(.medium))
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .background(
+                                Capsule()
+                                    .fill(selectedQuickFilter == filter ? Color.accentColor : Color(.systemGray5))
+                            )
+                            .foregroundStyle(selectedQuickFilter == filter ? .white : .primary)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 8)
         }
     }
 
@@ -93,12 +174,12 @@ struct TransactionsView: View {
     // MARK: - Grouping
 
     private var pendingTransactions: [Transaction] {
-        transactions.filter { $0.pending }
+        filteredTransactions.filter { $0.pending }
     }
 
     private var groupedTransactions: [(key: Date, value: [Transaction])] {
         // Filter out pending transactions (shown in separate section)
-        let postedTransactions = transactions.filter { !$0.pending }
+        let postedTransactions = filteredTransactions.filter { !$0.pending }
 
         // Group by date (ignoring time component)
         let grouped = Dictionary(grouping: postedTransactions) { transaction in

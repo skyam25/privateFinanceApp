@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P4 - Transaction View
-- **Current Task:** P4-T3 (next)
+- **Current Task:** P4-T3 complete, P5-T1 next
 - **Last Updated:** 2026-01-18
 
 ---
@@ -325,6 +325,25 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
   - SwiftUI previews for different transaction types
   - Build and 192 tests pass
 
+### P4-T3: Search and Filter
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Utilities/TransactionFilter.swift
+  - GhostVault/Views/Transactions/TransactionFilterSheet.swift
+  - GhostVaultTests/TransactionFilterTests.swift (37 tests)
+- Files modified:
+  - GhostVault/Views/Transactions/TransactionsView.swift (search bar, quick filter pills, filter button)
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - TransactionFilter utility with Options struct, DateRange, QuickFilter enums
+  - Search by payee, description, amount, or category
+  - Quick filter pills: All, This Month, Last Month, Income, Expenses
+  - TransactionFilterSheet for advanced filtering by account, classification, date range
+  - filteredTransactions computed property drives list display
+  - No results state with clear filters button
+  - SwiftUI previews for filter sheet
+  - Build and 229 tests pass
+
 ---
 
 ## In Progress
@@ -343,7 +362,7 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 16 (P0 complete, P1 complete, P2 complete, P3 complete, P4-T1, P4-T2)
+- Completed: 17 (P0 complete, P1 complete, P2 complete, P3 complete, P4-T1, P4-T2, P4-T3)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 192 passing
+- Total tests: 229 passing
