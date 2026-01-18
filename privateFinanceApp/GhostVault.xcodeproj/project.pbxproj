@@ -59,6 +59,7 @@
 		VW019 /* CategoryBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW019; };
 		UTL009 /* CategoryMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL009; };
 		TST017 /* CategoryMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST017; };
+		VW020 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW020; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -139,6 +140,7 @@
 		SRCVW019 /* CategoryBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBreakdownView.swift; sourceTree = "<group>"; };
 		SRCUTL009 /* CategoryMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMatcher.swift; sourceTree = "<group>"; };
 		SRCTST017 /* CategoryMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMatcherTests.swift; sourceTree = "<group>"; };
+		SRCVW020 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
 		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
 		SRCUTL008 /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				SRCVW019 /* CategoryBreakdownView.swift */,
+				SRCVW020 /* CategoryDetailView.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				VW018 /* IncomeExpenseChartView.swift in Sources */,
 				VW019 /* CategoryBreakdownView.swift in Sources */,
 				UTL009 /* CategoryMatcher.swift in Sources */,
+				VW020 /* CategoryDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

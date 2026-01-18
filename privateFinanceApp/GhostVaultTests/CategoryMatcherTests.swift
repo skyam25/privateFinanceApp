@@ -194,14 +194,30 @@ final class CategoryMatcherTests: XCTestCase {
         XCTAssertEqual(result?.category, "Transportation")
     }
 
-    func testDetectsTransportationFromUber() {
+    func testDetectsTransportationFromUberTrip() {
         let transaction = Transaction(
             id: "12",
             accountId: "acc1",
             posted: Date(),
             amount: "-25.00",
-            transactionDescription: "UBER *TRIP",
+            transactionDescription: "UBER TRIP SF123",
             payee: "Uber"
+        )
+
+        let result = CategoryMatcher.detectCategory(transaction)
+
+        XCTAssertNotNil(result)
+        XCTAssertEqual(result?.category, "Transportation")
+    }
+
+    func testDetectsTransportationFromLyft() {
+        let transaction = Transaction(
+            id: "12b",
+            accountId: "acc1",
+            posted: Date(),
+            amount: "-30.00",
+            transactionDescription: "LYFT *RIDE",
+            payee: "Lyft"
         )
 
         let result = CategoryMatcher.detectCategory(transaction)

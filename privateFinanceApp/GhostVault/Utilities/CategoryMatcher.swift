@@ -61,7 +61,7 @@ struct CategoryMatcher {
             "76", "valero", "marathon", "speedway", "wawa", "sheetz",
             "quiktrip", "kwik trip", "racetrac", "circle k", "pilot",
             "loves", "love's", "flying j", "ta travel",
-            "uber", "lyft", "taxi", "cab",
+            "uber trip", "uber *trip", "lyft", "taxi", "cab",
             "dmv", "toll", "parking", "garage",
             "jiffy lube", "firestone", "midas", "pep boys", "autozone",
             "o'reilly", "napa auto", "advance auto", "carwash",

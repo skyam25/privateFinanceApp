@@ -484,7 +484,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Month-over-month comparison display",
     "Tap category from breakdown to navigate here"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

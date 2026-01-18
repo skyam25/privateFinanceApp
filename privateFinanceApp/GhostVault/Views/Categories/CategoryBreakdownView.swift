@@ -11,13 +11,21 @@ import Charts
 
 // MARK: - Category Data Point
 
-struct CategoryDataPoint: Identifiable {
+struct CategoryDataPoint: Identifiable, Hashable {
     let id = UUID()
     let name: String
     let amount: Decimal
     let percentage: Double
     let color: Color
     let icon: String
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: CategoryDataPoint, rhs: CategoryDataPoint) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
 // MARK: - Category Breakdown View
@@ -27,6 +35,7 @@ struct CategoryBreakdownView: View {
 
     @State private var selectedMonth: Date = Date()
     @State private var selectedCategory: CategoryDataPoint?
+    @State private var navigatingCategory: CategoryDataPoint?
 
     var body: some View {
         ScrollView {
@@ -165,18 +174,20 @@ struct CategoryBreakdownView: View {
                 .padding(.bottom, 4)
 
             ForEach(categoryData.sorted { $0.amount > $1.amount }) { category in
-                categoryRow(for: category)
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        withAnimation {
-                            if selectedCategory?.id == category.id {
-                                selectedCategory = nil
-                            } else {
-                                selectedCategory = category
-                            }
-                        }
-                    }
+                Button {
+                    navigatingCategory = category
+                } label: {
+                    categoryRow(for: category)
+                }
+                .buttonStyle(.plain)
             }
+        }
+        .navigationDestination(item: $navigatingCategory) { category in
+            CategoryDetailView(
+                categoryName: category.name,
+                categoryColor: category.color,
+                categoryIcon: category.icon
+            )
         }
     }
 
@@ -207,6 +218,10 @@ struct CategoryBreakdownView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+
+            Image(systemName: "chevron.right")
+                .font(.caption)
+                .foregroundStyle(.secondary)
         }
         .padding(.vertical, 8)
         .padding(.horizontal, 12)
