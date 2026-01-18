@@ -65,35 +65,11 @@ struct CategoryBreakdownView: View {
     // MARK: - Month Selector
 
     private var monthSelector: some View {
-        HStack {
-            Button {
-                withAnimation {
-                    selectedMonth = MonthlyIncomeCalculator.previousMonth(from: selectedMonth)
-                }
-            } label: {
-                Image(systemName: "chevron.left.circle.fill")
-                    .font(.title2)
-                    .foregroundStyle(.accent)
-            }
-
-            Spacer()
-
-            Text(monthDisplayString)
-                .font(.headline)
-
-            Spacer()
-
-            Button {
-                withAnimation {
-                    selectedMonth = MonthlyIncomeCalculator.nextMonth(from: selectedMonth)
-                }
-            } label: {
-                Image(systemName: "chevron.right.circle.fill")
-                    .font(.title2)
-                    .foregroundStyle(canGoForward ? .accent : .secondary.opacity(0.3))
-            }
-            .disabled(!canGoForward)
-        }
+        MonthSelectorView(
+            selectedMonth: $selectedMonth,
+            monthDisplayString: monthDisplayString,
+            canGoForward: canGoForward
+        )
     }
 
     // MARK: - Donut Chart Section

@@ -16,4 +16,10 @@
 - Clones: 13 found, 244 lines duplicated
 - Fixed: formatCurrency/formatCurrencyCompact in 6 files → CurrencyFormatter.swift utility
 - Tests: BUILD SUCCEEDED
+- Remaining: 11 clones
+
+## Iteration 4
+- Clones: 11 found, 196 lines duplicated
+- Fixed: CategoryBreakdownView.swift + CategoryDetailView.swift monthSelector → MonthSelectorView.swift
+- Tests: BUILD SUCCEEDED
 - Remaining: expecting fewer clones
