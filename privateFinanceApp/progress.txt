@@ -1,8 +1,8 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P6 - Trend Charts (In Progress)
-- **Current Task:** P6-T3 next
+- **Phase:** P7 - Spending Categories (Next)
+- **Current Task:** P7-T1 next
 - **Last Updated:** 2026-01-18
 
 ---
@@ -442,6 +442,30 @@ All 3 Business Logic tasks complete. Phase 6 (Trend Charts) next.
   - SwiftUI previews with sample data (3-month and 1-month)
   - Build and 354 tests pass
 
+### P6-T3: Net Monthly Income Bar Chart
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Charts/IncomeExpenseChartView.swift
+- Files modified:
+  - GhostVault/Views/Dashboard/NetMonthlyIncomeCard.swift (added navigation to chart)
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - IncomeExpenseChartView with Swift Charts bar chart
+  - IncomeExpenseViewMode enum for toggling between views
+  - Income vs Expenses view: side-by-side bars per month
+  - Net Income view: single bars with green/red coloring
+  - Same ChartTimeframe selector as NetWorthChartView
+  - Period totals and monthly averages summary cards
+  - Navigation from NetMonthlyIncomeCard via "View Trend Chart" button
+  - SwiftUI previews with sample data
+  - Build and 354 tests pass
+
+---
+
+## Phase 6 Complete - 2026-01-18
+
+All 3 Trend Charts tasks complete. Phase 7 (Spending Categories) next.
+
 ---
 
 ## In Progress
@@ -460,7 +484,7 @@ All 3 Business Logic tasks complete. Phase 6 (Trend Charts) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 22 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5 complete, P6-T1 complete, P6-T2 complete)
+- Completed: 23 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5 complete, P6 complete)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 354 passing

@@ -13,6 +13,7 @@ struct NetMonthlyIncomeCard: View {
 
     @State private var selectedMonth: Date = Date()
     @State private var isExpanded = false
+    @State private var showChart = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -133,9 +134,31 @@ struct NetMonthlyIncomeCard: View {
                         .foregroundStyle(.accent)
                 }
             }
+
+            Divider()
+                .padding(.vertical, 8)
+
+            // View Trend Chart button
+            Button {
+                showChart = true
+            } label: {
+                HStack {
+                    Image(systemName: "chart.bar")
+                    Text("View Trend Chart")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                .foregroundStyle(.accent)
+            }
+            .buttonStyle(.plain)
         }
         .padding(.top, 12)
         .font(.subheadline)
+        .navigationDestination(isPresented: $showChart) {
+            IncomeExpenseChartView()
+        }
     }
 
     // MARK: - Swipe Gesture
