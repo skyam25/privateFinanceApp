@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P2 - Dashboard (Core Feature)
-- **Current Task:** P2-T2 (next)
+- **Current Task:** P2-T3 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -177,9 +177,29 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 ---
 
+### P2-T2: Net Monthly Income Card
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Utilities/MonthlyIncomeCalculator.swift
+  - GhostVault/Views/Dashboard/NetMonthlyIncomeCard.swift
+  - GhostVaultTests/MonthlyIncomeCalculatorTests.swift (20 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - MonthlyIncomeCalculator with income/expense calculation
+  - Excludes transfer category from calculations
+  - Month filtering for transactions
+  - NetMonthlyIncomeCard with month selector (arrows + swipe)
+  - Large net income display with green/red coloring
+  - Expandable income/expenses breakdown
+  - SwiftUI preview with sample data
+  - Build and 140 tests pass
+
+---
+
 ## In Progress
 
-(P2-T2 next)
+(P2-T3 next)
 
 ---
 
@@ -193,7 +213,7 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 9 (P0 complete, P1 complete, P2-T1)
+- Completed: 10 (P0 complete, P1 complete, P2-T1, P2-T2)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 121 passing
+- Total tests: 140 passing

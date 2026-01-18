@@ -39,6 +39,8 @@
 
 		/* Utilities */
 		UTL001 /* NetWorthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL001; };
+		UTL002 /* MonthlyIncomeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL002; };
+		VW012 /* NetMonthlyIncomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW012; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -49,6 +51,7 @@
 		TST006 /* TokenValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST006; };
 		TST007 /* AccountFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST007; };
 		TST008 /* NetWorthCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST008; };
+		TST009 /* MonthlyIncomeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST009; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,8 @@
 
 		/* Utilities */
 		SRCUTL001 /* NetWorthCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCalculator.swift; sourceTree = "<group>"; };
+		SRCUTL002 /* MonthlyIncomeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyIncomeCalculator.swift; sourceTree = "<group>"; };
+		SRCVW012 /* NetMonthlyIncomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMonthlyIncomeCard.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 		SRCTST006 /* TokenValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenValidatorTests.swift; sourceTree = "<group>"; };
 		SRCTST007 /* AccountFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFilterTests.swift; sourceTree = "<group>"; };
 		SRCTST008 /* NetWorthCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCalculatorTests.swift; sourceTree = "<group>"; };
+		SRCTST009 /* MonthlyIncomeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyIncomeCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -152,6 +158,7 @@
 				SRCTST006 /* TokenValidatorTests.swift */,
 				SRCTST007 /* AccountFilterTests.swift */,
 				SRCTST008 /* NetWorthCalculatorTests.swift */,
+				SRCTST009 /* MonthlyIncomeCalculatorTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 			children = (
 				SRCVW001 /* DashboardView.swift */,
 				SRCVW011 /* NetWorthCard.swift */,
+				SRCVW012 /* NetMonthlyIncomeCard.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				SRCUTL001 /* NetWorthCalculator.swift */,
+				SRCUTL002 /* MonthlyIncomeCalculator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -393,6 +402,8 @@
 				VW010 /* ClassificationReviewView.swift in Sources */,
 				VW011 /* NetWorthCard.swift in Sources */,
 				UTL001 /* NetWorthCalculator.swift in Sources */,
+				VW012 /* NetMonthlyIncomeCard.swift in Sources */,
+				UTL002 /* MonthlyIncomeCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +419,7 @@
 				TST006 /* TokenValidatorTests.swift in Sources */,
 				TST007 /* AccountFilterTests.swift in Sources */,
 				TST008 /* NetWorthCalculatorTests.swift in Sources */,
+				TST009 /* MonthlyIncomeCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

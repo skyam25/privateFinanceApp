@@ -199,7 +199,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Income and expense breakdown below",
     "Unit test for net income calculation (income - expenses, excluding transfers)"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 
