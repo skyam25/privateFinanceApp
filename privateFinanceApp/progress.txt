@@ -1,8 +1,8 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P4 - Transaction View
-- **Current Task:** P4-T3 complete, P5-T1 next
+- **Phase:** P5 - Business Logic
+- **Current Task:** P5-T1 complete, P5-T2 next
 - **Last Updated:** 2026-01-18
 
 ---
@@ -346,6 +346,31 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
 
 ---
 
+## Phase 4 Complete - 2026-01-18
+
+All 3 Transaction View tasks complete. Phase 5 (Business Logic) next.
+
+---
+
+### P5-T1: Transfer Detection
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Utilities/TransferDetector.swift
+  - GhostVaultTests/TransferDetectorTests.swift (31 tests)
+- Files modified:
+  - GhostVault/Models/Transaction.swift (added matchedTransferId, isMatchedTransfer)
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - TransferDetector utility for matching transfers across accounts
+  - Detects matching amounts within 3 days across different accounts
+  - Links matched transactions via matchedTransferId
+  - Excludes pending transactions from matching
+  - Auto-classifies as Transfer with Auto-Transfer reason
+  - Support for unmatch and statistics functions
+  - Build and 260 tests pass
+
+---
+
 ## In Progress
 
 (none)
@@ -362,7 +387,7 @@ All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 17 (P0 complete, P1 complete, P2 complete, P3 complete, P4-T1, P4-T2, P4-T3)
+- Completed: 18 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5-T1)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 229 passing
+- Total tests: 260 passing

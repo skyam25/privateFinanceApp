@@ -21,8 +21,14 @@ final class Transaction {
     var category: String?
     var classificationReason: String? // "Default", "Payee Rule: [name]", "Auto-Transfer", etc.
     var isIgnored: Bool // Exclude from calculations
+    var matchedTransferId: String? // ID of the matched transfer transaction
 
     // Computed properties
+
+    /// Whether this transaction has been matched with a transfer
+    var isMatchedTransfer: Bool {
+        matchedTransferId != nil
+    }
 
     /// Classification type for display badges
     var classificationType: ClassificationType {
@@ -61,7 +67,8 @@ final class Transaction {
         pending: Bool = false,
         category: String? = nil,
         classificationReason: String? = "Default",
-        isIgnored: Bool = false
+        isIgnored: Bool = false,
+        matchedTransferId: String? = nil
     ) {
         self.id = id
         self.accountId = accountId
@@ -74,6 +81,7 @@ final class Transaction {
         self.category = category
         self.classificationReason = classificationReason
         self.isIgnored = isIgnored
+        self.matchedTransferId = matchedTransferId
     }
 
     // Initialize from SimpleFIN API response
