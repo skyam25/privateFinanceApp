@@ -40,4 +40,10 @@
 - Clones: 8 found, 115 lines duplicated
 - Fixed: AccountDetailView.swift + TransactionsView.swift formattedAmount → CurrencyFormatter.format
 - Tests: BUILD SUCCEEDED
+- Remaining: 7 clones
+
+## Iteration 8
+- Clones: 7 found, 102 lines duplicated
+- Fixed: AccountDiscoveryView.swift + ClassificationReviewView.swift error state → InlineErrorView.swift
+- Tests: BUILD SUCCEEDED
 - Remaining: expecting fewer clones

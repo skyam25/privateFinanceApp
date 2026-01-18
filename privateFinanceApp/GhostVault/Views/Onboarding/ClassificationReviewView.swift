@@ -50,20 +50,12 @@ struct ClassificationReviewView: View {
                 Spacer()
             } else if let error = errorMessage {
                 Spacer()
-                VStack(spacing: 16) {
-                    Image(systemName: "exclamationmark.triangle")
-                        .font(.system(size: 40))
-                        .foregroundStyle(.orange)
-                    Text(error)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.center)
-                    Button("Continue Anyway") {
-                        onComplete()
-                    }
-                    .buttonStyle(.bordered)
+                InlineErrorView(
+                    errorMessage: error,
+                    buttonTitle: "Continue Anyway"
+                ) {
+                    onComplete()
                 }
-                .padding()
                 Spacer()
             } else if transactions.isEmpty {
                 Spacer()

@@ -75,6 +75,7 @@
 		UTL010 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL010 /* CurrencyFormatter.swift */; };
 		VW026 /* MonthSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW026 /* MonthSelectorView.swift */; };
 		VW027 /* ExpandableCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW027 /* ExpandableCardContainer.swift */; };
+		VW028 /* InlineErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW028 /* InlineErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		SRCUTL010 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		SRCVW026 /* MonthSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorView.swift; sourceTree = "<group>"; };
 		SRCVW027 /* ExpandableCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardContainer.swift; sourceTree = "<group>"; };
+		SRCVW028 /* InlineErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -340,6 +342,7 @@
 				SRCVW022 /* EmptyStateView.swift */,
 				SRCVW023 /* ErrorStateView.swift */,
 				SRCVW027 /* ExpandableCardContainer.swift */,
+				SRCVW028 /* InlineErrorView.swift */,
 				SRCVW026 /* MonthSelectorView.swift */,
 				SRCVW025 /* TimeframeSelectorView.swift */,
 			);
@@ -535,6 +538,7 @@
 				UTL010 /* CurrencyFormatter.swift in Sources */,
 				VW026 /* MonthSelectorView.swift in Sources */,
 				VW027 /* ExpandableCardContainer.swift in Sources */,
+				VW028 /* InlineErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,22 +47,14 @@ struct AccountDiscoveryView: View {
                 Spacer()
             } else if let error = errorMessage {
                 Spacer()
-                VStack(spacing: 16) {
-                    Image(systemName: "exclamationmark.triangle")
-                        .font(.system(size: 40))
-                        .foregroundStyle(.orange)
-                    Text(error)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .multilineTextAlignment(.center)
-                    Button("Retry") {
-                        Task {
-                            await fetchAccounts()
-                        }
+                InlineErrorView(
+                    errorMessage: error,
+                    buttonTitle: "Retry"
+                ) {
+                    Task {
+                        await fetchAccounts()
                     }
-                    .buttonStyle(.bordered)
                 }
-                .padding()
                 Spacer()
             } else {
                 accountsList
