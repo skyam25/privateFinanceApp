@@ -55,7 +55,7 @@ The market is polarized. GhostVault targets the "Hybrid" gap.
 
 ## 4. UX Strategy: Streamlined Onboarding
 
-SimpleFIN is required to use this app. The onboarding flow guides users through setup quickly.
+SimpleFIN is required to use this app. The onboarding uses an embedded web view to make SimpleFIN setup as seamless as possible.
 
 ### Onboarding Flow
 
@@ -64,13 +64,14 @@ SimpleFIN is required to use this app. The onboarding flow guides users through 
 - Explain that SimpleFIN connection is required
 - "Get Started" button
 
-**Step 2: SimpleFIN Setup**
-- Explain what SimpleFIN is (secure bank connection bridge)
-- Two paths:
-  - "I have a SimpleFIN token" → Go to token entry
-  - "I need a SimpleFIN account" → Open SimpleFIN.org in browser
-- Token entry field with paste support
-- Validate and claim token
+**Step 2: SimpleFIN Setup (Web View)**
+- Embedded WKWebView opens SimpleFIN Bridge signup/login
+- User completes SimpleFIN setup entirely within the app
+- Two paths handled in web view:
+  - New users: Sign up, pay for SimpleFIN, connect banks
+  - Existing users: Log in and generate new setup token
+- **Key feature:** App monitors web view to automatically capture the setup token when generated
+- Token is claimed and stored in Keychain automatically
 - **Success:** "Connected! Syncing your accounts..."
 
 **Step 3: Account Setup**
@@ -84,23 +85,33 @@ SimpleFIN is required to use this app. The onboarding flow guides users through 
   - **Net Worth** (total assets minus liabilities)
   - **Net Monthly Income** (income minus expenses for current month)
 
+### Web View Integration Details
+
+The embedded web view approach provides:
+- **Seamless UX** - User never leaves the app
+- **Automatic token capture** - No manual copy/paste required
+- **Secure handling** - Token goes directly to Keychain
+- **Fallback option** - Manual token entry if auto-capture fails
+
 ---
 
 ## 5. Business Model: "Bring Your Own Key"
 
-Avoid reselling the data feed. It lowers liability and increases trust.
+One-time app purchase. User pays SimpleFIN directly for data access.
 
 ### Revenue Stream
 
 | Item | Price | Notes |
 |------|-------|-------|
-| **App Price** | $24.99/year OR $49.99 lifetime | Subscription or one-time purchase |
-| **Data Cost** | $0 to developer | User pays SimpleFIN $15/year directly |
-| **Total Cost to User** | ~$40/year | Cheaper than Monarch's $100/year |
+| **App Price** | $X.XX (one-time) | Single purchase, no subscription |
+| **Data Cost** | $0 to developer | User pays SimpleFIN ~$15/year directly |
 
-### Marketing Angle
+### Why This Works
 
-> *"We charge for the software, not the data. By paying SimpleFIN directly, you ensure that WE (the app developers) are never the middleman for your banking credentials."*
+- **No recurring fees** - Users buy once, own forever
+- **No middleman** - User's SimpleFIN credentials go directly to SimpleFIN, not through us
+- **Lower liability** - We never touch banking credentials or transaction data on our servers
+- **Trust building** - Users control their own data access
 
 ---
 
@@ -112,7 +123,9 @@ Keep it simple. Focus on two key metrics: **Net Worth** and **Net Monthly Income
 
 #### 1. Onboarding Flow
 - [ ] Welcome screen explaining SimpleFIN requirement
-- [ ] SimpleFIN token entry with validation
+- [ ] Embedded web view for SimpleFIN signup/login
+- [ ] Automatic token capture from web view
+- [ ] Fallback manual token entry
 - [ ] Account discovery and setup
 - [ ] Smooth transition to dashboard
 
@@ -228,7 +241,7 @@ CategoryRule {
 
 ## 9. Open Questions
 
-1. **Pricing Model:** Subscription vs. one-time purchase?
+1. **App Price:** What should the one-time purchase price be?
 2. **App Name:** "GhostVault" or something else?
 3. **Widgets:** iOS home screen widgets for net worth display in future phase?
 
