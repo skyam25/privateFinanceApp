@@ -35,6 +35,10 @@
 		VW008 /* SimpleFINWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW008; };
 		VW009 /* AccountDiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW009; };
 		VW010 /* ClassificationReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW010; };
+		VW011 /* NetWorthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW011; };
+
+		/* Utilities */
+		UTL001 /* NetWorthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL001; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -44,6 +48,7 @@
 		TST005 /* SimpleFINServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST005; };
 		TST006 /* TokenValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST006; };
 		TST007 /* AccountFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST007; };
+		TST008 /* NetWorthCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST008; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +93,10 @@
 		SRCVW008 /* SimpleFINWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINWebView.swift; sourceTree = "<group>"; };
 		SRCVW009 /* AccountDiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDiscoveryView.swift; sourceTree = "<group>"; };
 		SRCVW010 /* ClassificationReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationReviewView.swift; sourceTree = "<group>"; };
+		SRCVW011 /* NetWorthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCard.swift; sourceTree = "<group>"; };
+
+		/* Utilities */
+		SRCUTL001 /* NetWorthCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCalculator.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -97,6 +106,7 @@
 		SRCTST005 /* SimpleFINServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINServiceTests.swift; sourceTree = "<group>"; };
 		SRCTST006 /* TokenValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenValidatorTests.swift; sourceTree = "<group>"; };
 		SRCTST007 /* AccountFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFilterTests.swift; sourceTree = "<group>"; };
+		SRCTST008 /* NetWorthCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -141,6 +151,7 @@
 				SRCTST005 /* SimpleFINServiceTests.swift */,
 				SRCTST006 /* TokenValidatorTests.swift */,
 				SRCTST007 /* AccountFilterTests.swift */,
+				SRCTST008 /* NetWorthCalculatorTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -171,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				SRCVW001 /* DashboardView.swift */,
+				SRCVW011 /* NetWorthCard.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -268,6 +280,7 @@
 		GRPUTILS /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				SRCUTL001 /* NetWorthCalculator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -378,6 +391,8 @@
 				VW008 /* SimpleFINWebView.swift in Sources */,
 				VW009 /* AccountDiscoveryView.swift in Sources */,
 				VW010 /* ClassificationReviewView.swift in Sources */,
+				VW011 /* NetWorthCard.swift in Sources */,
+				UTL001 /* NetWorthCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +407,7 @@
 				TST005 /* SimpleFINServiceTests.swift in Sources */,
 				TST006 /* TokenValidatorTests.swift in Sources */,
 				TST007 /* AccountFilterTests.swift in Sources */,
+				TST008 /* NetWorthCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

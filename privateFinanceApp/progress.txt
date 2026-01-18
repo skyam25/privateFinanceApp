@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P2 - Dashboard (Core Feature)
-- **Current Task:** P2-T1 (next)
+- **Current Task:** P2-T2 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -157,9 +157,29 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 ---
 
+### P2-T1: Net Worth Card
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Utilities/NetWorthCalculator.swift
+  - GhostVault/Views/Dashboard/NetWorthCard.swift
+  - GhostVaultTests/NetWorthCalculatorTests.swift (20 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - NetWorthCalculator utility with assets/liabilities calculation
+  - Handles hidden accounts, account type classification
+  - Delta calculation for change tracking (amount and percentage)
+  - NetWorthCard view with large number display
+  - Tap to expand for assets vs liabilities breakdown
+  - Green/red delta indicator
+  - SwiftUI preview with sample data
+  - Build and 121 tests pass
+
+---
+
 ## In Progress
 
-(P2-T1 next)
+(P2-T2 next)
 
 ---
 
@@ -173,7 +193,7 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 8 (P0 complete, P1 complete)
+- Completed: 9 (P0 complete, P1 complete, P2-T1)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 101 passing
+- Total tests: 121 passing

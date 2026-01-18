@@ -184,7 +184,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Tap to expand assets vs liabilities breakdown",
     "Unit test for net worth calculation (assets - liabilities)"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 
