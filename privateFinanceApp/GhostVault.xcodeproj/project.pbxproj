@@ -74,6 +74,7 @@
 		VW025 /* TimeframeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW025 /* TimeframeSelectorView.swift */; };
 		UTL010 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL010 /* CurrencyFormatter.swift */; };
 		VW026 /* MonthSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW026 /* MonthSelectorView.swift */; };
+		VW027 /* ExpandableCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW027 /* ExpandableCardContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		SRCVW025 /* TimeframeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeframeSelectorView.swift; sourceTree = "<group>"; };
 		SRCUTL010 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		SRCVW026 /* MonthSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorView.swift; sourceTree = "<group>"; };
+		SRCVW027 /* ExpandableCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -337,6 +339,7 @@
 				SRCVW024 /* CustomDatePickerSheet.swift */,
 				SRCVW022 /* EmptyStateView.swift */,
 				SRCVW023 /* ErrorStateView.swift */,
+				SRCVW027 /* ExpandableCardContainer.swift */,
 				SRCVW026 /* MonthSelectorView.swift */,
 				SRCVW025 /* TimeframeSelectorView.swift */,
 			);
@@ -531,6 +534,7 @@
 				VW025 /* TimeframeSelectorView.swift in Sources */,
 				UTL010 /* CurrencyFormatter.swift in Sources */,
 				VW026 /* MonthSelectorView.swift in Sources */,
+				VW027 /* ExpandableCardContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

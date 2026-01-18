@@ -22,4 +22,10 @@
 - Clones: 11 found, 196 lines duplicated
 - Fixed: CategoryBreakdownView.swift + CategoryDetailView.swift monthSelector → MonthSelectorView.swift
 - Tests: BUILD SUCCEEDED
+- Remaining: 10 clones
+
+## Iteration 5
+- Clones: 10 found, 158 lines duplicated
+- Fixed: NetMonthlyIncomeCard.swift + NetWorthCard.swift body pattern → ExpandableCardContainer.swift
+- Tests: BUILD SUCCEEDED
 - Remaining: expecting fewer clones

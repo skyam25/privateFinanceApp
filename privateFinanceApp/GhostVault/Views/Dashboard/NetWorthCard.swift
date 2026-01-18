@@ -17,30 +17,11 @@ struct NetWorthCard: View {
     @State private var showChart = false
 
     var body: some View {
-        VStack(spacing: 0) {
-            // Main card content
-            Button {
-                withAnimation(.spring(response: 0.3)) {
-                    isExpanded.toggle()
-                }
-            } label: {
-                mainCardContent
-            }
-            .buttonStyle(.plain)
-
-            // Expanded breakdown
-            if isExpanded {
-                Divider()
-                    .padding(.horizontal)
-
-                expandedContent
-                    .transition(.opacity.combined(with: .move(edge: .top)))
-            }
+        ExpandableCardContainer(isExpanded: $isExpanded) {
+            mainCardContent
+        } expandedContent: {
+            expandedContent
         }
-        .padding()
-        .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .shadow(color: .black.opacity(0.1), radius: 8, x: 0, y: 2)
     }
 
     // MARK: - Main Card Content
