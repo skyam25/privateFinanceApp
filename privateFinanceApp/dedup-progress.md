@@ -10,4 +10,10 @@
 - Clones: 14 found, 284 lines duplicated
 - Fixed: IncomeExpenseChartView.swift:105-137 + NetWorthChartView.swift:99-131 → TimeframeSelectorView.swift
 - Tests: BUILD SUCCEEDED
-- Remaining: 13 clones (expected)
+- Remaining: 13 clones
+
+## Iteration 3
+- Clones: 13 found, 244 lines duplicated
+- Fixed: formatCurrency/formatCurrencyCompact in 6 files → CurrencyFormatter.swift utility
+- Tests: BUILD SUCCEEDED
+- Remaining: expecting fewer clones

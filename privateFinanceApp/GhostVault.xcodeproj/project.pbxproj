@@ -72,6 +72,7 @@
 		VW023 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW023 /* ErrorStateView.swift */; };
 		VW024 /* CustomDatePickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW024 /* CustomDatePickerSheet.swift */; };
 		VW025 /* TimeframeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW025 /* TimeframeSelectorView.swift */; };
+		UTL010 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL010 /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +153,7 @@
 		SRCVW023 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		SRCVW024 /* CustomDatePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePickerSheet.swift; sourceTree = "<group>"; };
 		SRCVW025 /* TimeframeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeframeSelectorView.swift; sourceTree = "<group>"; };
+		SRCUTL010 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -280,6 +282,7 @@
 				SRCUTL007 /* IncomeDetector.swift */,
 				SRCUTL008 /* RuleEngine.swift */,
 				SRCUTL009 /* CategoryMatcher.swift */,
+				SRCUTL010 /* CurrencyFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				VW023 /* ErrorStateView.swift in Sources */,
 				VW024 /* CustomDatePickerSheet.swift in Sources */,
 				VW025 /* TimeframeSelectorView.swift in Sources */,
+				UTL010 /* CurrencyFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -236,12 +236,8 @@ struct CategoryBreakdownView: View {
     // MARK: - Empty State
 
     private var emptyStateView: some View {
-        ContentUnavailableView {
-            Label("No Expenses", systemImage: "chart.pie")
-        } description: {
-            Text("No expense transactions found for this month.")
-        }
-        .frame(height: 300)
+        NoCategoriesEmptyState()
+            .frame(height: 300)
     }
 
     // MARK: - Computed Properties
@@ -329,11 +325,7 @@ struct CategoryBreakdownView: View {
     }
 
     private func formatCurrency(_ value: Decimal) -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.currencyCode = "USD"
-        formatter.maximumFractionDigits = 0
-        return formatter.string(from: value as NSDecimalNumber) ?? "$0"
+        CurrencyFormatter.format(value)
     }
 }
 
