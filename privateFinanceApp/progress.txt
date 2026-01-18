@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P5 - Business Logic
-- **Current Task:** P5-T1 complete, P5-T2 next
+- **Current Task:** P5-T2 complete, P5-T3 next
 - **Last Updated:** 2026-01-18
 
 ---
@@ -369,6 +369,20 @@ All 3 Transaction View tasks complete. Phase 5 (Business Logic) next.
   - Support for unmatch and statistics functions
   - Build and 260 tests pass
 
+### P5-T2: Income Pattern Detection
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Utilities/IncomeDetector.swift
+  - GhostVaultTests/IncomeDetectorTests.swift (37 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - IncomeDetector utility with regex pattern matching
+  - Patterns for: Payroll, Direct Deposit, Salary, Wages, Social Security, Tax Refund, Dividend, Interest, Refund, Reimbursement, Bonus, Cashback, Unemployment
+  - Case-insensitive matching across description, payee, and memo
+  - Classification reason shows which pattern matched
+  - Build and 297 tests pass
+
 ---
 
 ## In Progress
@@ -387,7 +401,7 @@ All 3 Transaction View tasks complete. Phase 5 (Business Logic) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 18 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5-T1)
+- Completed: 19 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5-T1, P5-T2)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 260 passing
+- Total tests: 297 passing

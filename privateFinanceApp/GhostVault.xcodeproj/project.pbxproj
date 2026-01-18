@@ -49,6 +49,7 @@
 		UTL005 /* TransactionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL005; };
 		VW016 /* TransactionFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW016; };
 		UTL006 /* TransferDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL006; };
+		UTL007 /* IncomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL007; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -64,6 +65,7 @@
 		TST011 /* AccountBalanceDeltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST011; };
 		TST012 /* TransactionFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST012; };
 		TST013 /* TransferDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST013; };
+		TST014 /* IncomeDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST014; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,7 @@
 		SRCUTL005 /* TransactionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilter.swift; sourceTree = "<group>"; };
 		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
 		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
+		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		SRCTST011 /* AccountBalanceDeltaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceDeltaTests.swift; sourceTree = "<group>"; };
 		SRCTST012 /* TransactionFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterTests.swift; sourceTree = "<group>"; };
 		SRCTST013 /* TransferDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetectorTests.swift; sourceTree = "<group>"; };
+		SRCTST014 /* IncomeDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetectorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -187,6 +191,7 @@
 				SRCTST011 /* AccountBalanceDeltaTests.swift */,
 				SRCTST012 /* TransactionFilterTests.swift */,
 				SRCTST013 /* TransferDetectorTests.swift */,
+				SRCTST014 /* IncomeDetectorTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				SRCUTL004 /* AccountBalanceDelta.swift */,
 				SRCUTL005 /* TransactionFilter.swift */,
 				SRCUTL006 /* TransferDetector.swift */,
+				SRCUTL007 /* IncomeDetector.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				UTL005 /* TransactionFilter.swift in Sources */,
 				VW016 /* TransactionFilterSheet.swift in Sources */,
 				UTL006 /* TransferDetector.swift in Sources */,
+				UTL007 /* IncomeDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +475,7 @@
 				TST011 /* AccountBalanceDeltaTests.swift in Sources */,
 				TST012 /* TransactionFilterTests.swift in Sources */,
 				TST013 /* TransferDetectorTests.swift in Sources */,
+				TST014 /* IncomeDetectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
