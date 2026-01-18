@@ -14,9 +14,14 @@
 - Technique: Function extraction (mapNetworkError, mapSimpleFINError, mapFetchFailedError) + case consolidation
 - Tests: PASS
 
-Remaining violations after iteration 2: 6
-- RulesManagementView.swift:214 (complexity 16)
-- RulesManagementView.swift:336 (complexity 16)
+## Iteration 3
+- Violations found: 6
+- Fixed: RulesManagementView - colorForCategory (2 duplicate functions)
+- Original complexity: 16 each → New: below threshold (removed from violations)
+- Technique: Dictionary lookup (categoryColorMap) + shared function extraction
+- Tests: PASS
+
+Remaining violations after iteration 3: 4
 - Transaction.swift:144 (complexity 12)
 - TransactionDetailSheet.swift:357 (complexity 12)
 - SimpleFINServiceTests.swift:655 (complexity 12)
