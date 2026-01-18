@@ -27,16 +27,22 @@ struct OnboardingView: View {
                     }
 
                 case .tokenEntry:
-                    // Placeholder until P1-T2
-                    TokenEntryPlaceholderView {
-                        withAnimation {
-                            currentPage = .accountDiscovery
+                    TokenEntryView(
+                        onTokenClaimed: { _ in
+                            withAnimation {
+                                currentPage = .accountDiscovery
+                            }
+                        },
+                        onBack: {
+                            withAnimation {
+                                currentPage = .welcome
+                            }
+                        },
+                        onSignUp: {
+                            // Will navigate to WebView in P1-T3
+                            print("Sign up for SimpleFIN")
                         }
-                    } onBack: {
-                        withAnimation {
-                            currentPage = .welcome
-                        }
-                    }
+                    )
 
                 case .accountDiscovery:
                     // Placeholder until P1-T4
@@ -79,36 +85,6 @@ enum OnboardingPage {
 }
 
 // MARK: - Placeholder Views (to be replaced in subsequent tasks)
-
-private struct TokenEntryPlaceholderView: View {
-    let onContinue: () -> Void
-    let onBack: () -> Void
-
-    var body: some View {
-        VStack(spacing: 24) {
-            Spacer()
-            Image(systemName: "key.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.accent)
-            Text("Connect to SimpleFIN")
-                .font(.title2.bold())
-            Text("Token entry screen coming in P1-T2")
-                .foregroundStyle(.secondary)
-            Spacer()
-            Button("Continue", action: onContinue)
-                .buttonStyle(.borderedProminent)
-        }
-        .padding()
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: onBack) {
-                    Image(systemName: "chevron.left")
-                }
-            }
-        }
-    }
-}
 
 private struct AccountDiscoveryPlaceholderView: View {
     let onContinue: () -> Void

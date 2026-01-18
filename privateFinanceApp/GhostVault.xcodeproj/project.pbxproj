@@ -31,6 +31,7 @@
 		VW004 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW004; };
 		VW005 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW005; };
 		VW006 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW006; };
+		VW007 /* TokenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW007; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -38,6 +39,7 @@
 		TST003 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST003; };
 		TST004 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST004; };
 		TST005 /* SimpleFINServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST005; };
+		TST006 /* TokenValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST006; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 		SRCVW004 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		SRCVW005 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		SRCVW006 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		SRCVW007 /* TokenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEntryView.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		SRCTST003 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		SRCTST004 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
 		SRCTST005 /* SimpleFINServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINServiceTests.swift; sourceTree = "<group>"; };
+		SRCTST006 /* TokenValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -127,6 +131,7 @@
 				SRCTST003 /* TransactionTests.swift */,
 				SRCTST004 /* CategoryTests.swift */,
 				SRCTST005 /* SimpleFINServiceTests.swift */,
+				SRCTST006 /* TokenValidatorTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			children = (
 				SRCVW005 /* OnboardingView.swift */,
 				SRCVW006 /* WelcomeView.swift */,
+				SRCVW007 /* TokenEntryView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				VW004 /* SettingsView.swift in Sources */,
 				VW005 /* OnboardingView.swift in Sources */,
 				VW006 /* WelcomeView.swift in Sources */,
+				VW007 /* TokenEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +375,7 @@
 				TST003 /* TransactionTests.swift in Sources */,
 				TST004 /* CategoryTests.swift in Sources */,
 				TST005 /* SimpleFINServiceTests.swift in Sources */,
+				TST006 /* TokenValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
