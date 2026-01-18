@@ -76,6 +76,8 @@
 		VW026 /* MonthSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW026 /* MonthSelectorView.swift */; };
 		VW027 /* ExpandableCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW027 /* ExpandableCardContainer.swift */; };
 		VW028 /* InlineErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW028 /* InlineErrorView.swift */; };
+		VW029 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW029 /* TransactionRowView.swift */; };
+		VW030 /* AccountTransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW030 /* AccountTransactionsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +162,8 @@
 		SRCVW026 /* MonthSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorView.swift; sourceTree = "<group>"; };
 		SRCVW027 /* ExpandableCardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardContainer.swift; sourceTree = "<group>"; };
 		SRCVW028 /* InlineErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineErrorView.swift; sourceTree = "<group>"; };
+		SRCVW029 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		SRCVW030 /* AccountTransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTransactionsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -313,6 +317,7 @@
 			children = (
 				SRCVW002 /* AccountsView.swift */,
 				SRCVW014 /* AccountDetailView.swift */,
+				SRCVW030 /* AccountTransactionsListView.swift */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				SRCVW028 /* InlineErrorView.swift */,
 				SRCVW026 /* MonthSelectorView.swift */,
 				SRCVW025 /* TimeframeSelectorView.swift */,
+				SRCVW029 /* TransactionRowView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -539,6 +545,8 @@
 				VW026 /* MonthSelectorView.swift in Sources */,
 				VW027 /* ExpandableCardContainer.swift in Sources */,
 				VW028 /* InlineErrorView.swift in Sources */,
+				VW029 /* TransactionRowView.swift in Sources */,
+				VW030 /* AccountTransactionsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
