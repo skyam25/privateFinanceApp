@@ -7,77 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		/* App Files */
-		APP001 /* GhostVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC001; };
-		APP002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC002; };
-		APP003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = RES001; };
-
-		/* Models */
-		MOD001 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD001; };
-		MOD002 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD002; };
-		MOD003 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD003; };
-		MOD004 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD004; };
-		MOD005 /* SimpleFINModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD005; };
-
-		/* Services */
-		SVC001 /* SimpleFINService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCSVC001; };
-		SVC002 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCSVC002; };
-		SVC003 /* CloudKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCSVC003; };
-
-		/* Views */
-		VW001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW001; };
-		VW002 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW002; };
-		VW003 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW003; };
-		VW004 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW004; };
-		VW005 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW005; };
-		VW006 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW006; };
-		VW007 /* TokenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW007; };
-		VW008 /* SimpleFINWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW008; };
-		VW009 /* AccountDiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW009; };
-		VW010 /* ClassificationReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW010; };
-		VW011 /* NetWorthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW011; };
-
-		/* Utilities */
-		UTL001 /* NetWorthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL001; };
-		UTL002 /* MonthlyIncomeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL002; };
-		VW012 /* NetMonthlyIncomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW012; };
-		UTL003 /* SyncRateLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL003; };
-		VW013 /* SyncStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW013; };
-		VW014 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW014; };
-		UTL004 /* AccountBalanceDelta.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL004; };
-		VW015 /* TransactionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW015; };
-		UTL005 /* TransactionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL005; };
-		VW016 /* TransactionFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW016; };
-		UTL006 /* TransferDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL006; };
-		UTL007 /* IncomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL007; };
-		UTL008 /* RuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL008; };
-		MDL003 /* ClassificationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMDL003; };
-		MOD006 /* DailySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD006; };
-		MOD007 /* MonthlySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD007; };
-		VW017 /* NetWorthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW017; };
-		VW018 /* IncomeExpenseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW018; };
-		VW019 /* CategoryBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW019; };
-		UTL009 /* CategoryMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL009; };
-		TST017 /* CategoryMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST017; };
-		VW020 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW020; };
-
-		/* Test Files */
-		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
-		TST002 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST002; };
-		TST003 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST003; };
-		TST004 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST004; };
-		TST005 /* SimpleFINServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST005; };
-		TST006 /* TokenValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST006; };
-		TST007 /* AccountFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST007; };
-		TST008 /* NetWorthCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST008; };
-		TST009 /* MonthlyIncomeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST009; };
-		TST010 /* SyncRateLimiterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST010; };
-		TST011 /* AccountBalanceDeltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST011; };
-		TST012 /* TransactionFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST012; };
-		TST013 /* TransferDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST013; };
-		TST014 /* IncomeDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST014; };
-		TST015 /* RuleEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST015; };
-		TST016 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST016; };
+		APP001 /* GhostVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC001 /* GhostVaultApp.swift */; };
+		APP002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRC002 /* ContentView.swift */; };
+		APP003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = RES001 /* Assets.xcassets */; };
+		MDL003 /* ClassificationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMDL003 /* ClassificationRule.swift */; };
+		MOD001 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD001 /* Account.swift */; };
+		MOD002 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD002 /* Transaction.swift */; };
+		MOD003 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD003 /* Organization.swift */; };
+		MOD004 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD004 /* Category.swift */; };
+		MOD005 /* SimpleFINModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD005 /* SimpleFINModels.swift */; };
+		MOD006 /* DailySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD006 /* DailySnapshot.swift */; };
+		MOD007 /* MonthlySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD007 /* MonthlySnapshot.swift */; };
+		SVC001 /* SimpleFINService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCSVC001 /* SimpleFINService.swift */; };
+		SVC002 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCSVC002 /* KeychainService.swift */; };
+		SVC003 /* CloudKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCSVC003 /* CloudKitService.swift */; };
+		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001 /* GhostVaultTests.swift */; };
+		TST002 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST002 /* AccountTests.swift */; };
+		TST003 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST003 /* TransactionTests.swift */; };
+		TST004 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST004 /* CategoryTests.swift */; };
+		TST005 /* SimpleFINServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST005 /* SimpleFINServiceTests.swift */; };
+		TST006 /* TokenValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST006 /* TokenValidatorTests.swift */; };
+		TST007 /* AccountFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST007 /* AccountFilterTests.swift */; };
+		TST008 /* NetWorthCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST008 /* NetWorthCalculatorTests.swift */; };
+		TST009 /* MonthlyIncomeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST009 /* MonthlyIncomeCalculatorTests.swift */; };
+		TST010 /* SyncRateLimiterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST010 /* SyncRateLimiterTests.swift */; };
+		TST011 /* AccountBalanceDeltaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST011 /* AccountBalanceDeltaTests.swift */; };
+		TST012 /* TransactionFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST012 /* TransactionFilterTests.swift */; };
+		TST013 /* TransferDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST013 /* TransferDetectorTests.swift */; };
+		TST014 /* IncomeDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST014 /* IncomeDetectorTests.swift */; };
+		TST015 /* RuleEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST015 /* RuleEngineTests.swift */; };
+		TST016 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST016 /* SnapshotTests.swift */; };
+		TST017 /* CategoryMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST017 /* CategoryMatcherTests.swift */; };
+		TST018 /* ErrorStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST018 /* ErrorStateTests.swift */; };
+		UTL001 /* NetWorthCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL001 /* NetWorthCalculator.swift */; };
+		UTL002 /* MonthlyIncomeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL002 /* MonthlyIncomeCalculator.swift */; };
+		UTL003 /* SyncRateLimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL003 /* SyncRateLimiter.swift */; };
+		UTL004 /* AccountBalanceDelta.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL004 /* AccountBalanceDelta.swift */; };
+		UTL005 /* TransactionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL005 /* TransactionFilter.swift */; };
+		UTL006 /* TransferDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL006 /* TransferDetector.swift */; };
+		UTL007 /* IncomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL007 /* IncomeDetector.swift */; };
+		UTL008 /* RuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL008 /* RuleEngine.swift */; };
+		UTL009 /* CategoryMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCUTL009 /* CategoryMatcher.swift */; };
+		VW001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW001 /* DashboardView.swift */; };
+		VW002 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW002 /* AccountsView.swift */; };
+		VW003 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW003 /* TransactionsView.swift */; };
+		VW004 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW004 /* SettingsView.swift */; };
+		VW005 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW005 /* OnboardingView.swift */; };
+		VW006 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW006 /* WelcomeView.swift */; };
+		VW007 /* TokenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW007 /* TokenEntryView.swift */; };
+		VW009 /* AccountDiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW009 /* AccountDiscoveryView.swift */; };
+		VW010 /* ClassificationReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW010 /* ClassificationReviewView.swift */; };
+		VW011 /* NetWorthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW011 /* NetWorthCard.swift */; };
+		VW012 /* NetMonthlyIncomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW012 /* NetMonthlyIncomeCard.swift */; };
+		VW013 /* SyncStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW013 /* SyncStatusBar.swift */; };
+		VW014 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW014 /* AccountDetailView.swift */; };
+		VW015 /* TransactionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW015 /* TransactionDetailSheet.swift */; };
+		VW016 /* TransactionFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW016 /* TransactionFilterSheet.swift */; };
+		VW017 /* NetWorthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW017 /* NetWorthChartView.swift */; };
+		VW018 /* IncomeExpenseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW018 /* IncomeExpenseChartView.swift */; };
+		VW019 /* CategoryBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW019 /* CategoryBreakdownView.swift */; };
+		VW020 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW020 /* CategoryDetailView.swift */; };
+		VW021 /* RulesManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW021 /* RulesManagementView.swift */; };
+		VW022 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW022 /* EmptyStateView.swift */; };
+		VW023 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW023 /* ErrorStateView.swift */; };
+		VW024 /* CustomDatePickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW024 /* CustomDatePickerSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,62 +86,20 @@
 /* Begin PBXFileReference section */
 		PROD001 /* GhostVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		PROD002 /* GhostVaultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhostVaultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-
-		/* Source Files */
+		RES001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		SRC001 /* GhostVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultApp.swift; sourceTree = "<group>"; };
 		SRC002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		RES001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-
-		/* Models */
+		SRCMDL003 /* ClassificationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationRule.swift; sourceTree = "<group>"; };
 		SRCMOD001 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		SRCMOD002 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		SRCMOD003 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		SRCMOD004 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		SRCMOD005 /* SimpleFINModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINModels.swift; sourceTree = "<group>"; };
-
-		/* Services */
+		SRCMOD006 /* DailySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySnapshot.swift; sourceTree = "<group>"; };
+		SRCMOD007 /* MonthlySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySnapshot.swift; sourceTree = "<group>"; };
 		SRCSVC001 /* SimpleFINService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINService.swift; sourceTree = "<group>"; };
 		SRCSVC002 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		SRCSVC003 /* CloudKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitService.swift; sourceTree = "<group>"; };
-
-		/* Views */
-		SRCVW001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		SRCVW002 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
-		SRCVW003 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
-		SRCVW004 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		SRCVW005 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		SRCVW006 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		SRCVW007 /* TokenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEntryView.swift; sourceTree = "<group>"; };
-		SRCVW008 /* SimpleFINWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINWebView.swift; sourceTree = "<group>"; };
-		SRCVW009 /* AccountDiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDiscoveryView.swift; sourceTree = "<group>"; };
-		SRCVW010 /* ClassificationReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationReviewView.swift; sourceTree = "<group>"; };
-		SRCVW011 /* NetWorthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCard.swift; sourceTree = "<group>"; };
-
-		/* Utilities */
-		SRCUTL001 /* NetWorthCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCalculator.swift; sourceTree = "<group>"; };
-		SRCUTL002 /* MonthlyIncomeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyIncomeCalculator.swift; sourceTree = "<group>"; };
-		SRCVW012 /* NetMonthlyIncomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMonthlyIncomeCard.swift; sourceTree = "<group>"; };
-		SRCUTL003 /* SyncRateLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncRateLimiter.swift; sourceTree = "<group>"; };
-		SRCVW013 /* SyncStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusBar.swift; sourceTree = "<group>"; };
-		SRCVW014 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
-		SRCUTL004 /* AccountBalanceDelta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceDelta.swift; sourceTree = "<group>"; };
-		SRCVW015 /* TransactionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailSheet.swift; sourceTree = "<group>"; };
-		SRCUTL005 /* TransactionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilter.swift; sourceTree = "<group>"; };
-		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
-		SRCVW017 /* NetWorthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthChartView.swift; sourceTree = "<group>"; };
-		SRCVW018 /* IncomeExpenseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseChartView.swift; sourceTree = "<group>"; };
-		SRCVW019 /* CategoryBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBreakdownView.swift; sourceTree = "<group>"; };
-		SRCUTL009 /* CategoryMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMatcher.swift; sourceTree = "<group>"; };
-		SRCTST017 /* CategoryMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMatcherTests.swift; sourceTree = "<group>"; };
-		SRCVW020 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
-		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
-		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
-		SRCUTL008 /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
-		SRCMDL003 /* ClassificationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationRule.swift; sourceTree = "<group>"; };
-		SRCMOD006 /* DailySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySnapshot.swift; sourceTree = "<group>"; };
-		SRCMOD007 /* MonthlySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySnapshot.swift; sourceTree = "<group>"; };
-
-		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
 		SRCTST002 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		SRCTST003 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
@@ -165,27 +116,43 @@
 		SRCTST014 /* IncomeDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetectorTests.swift; sourceTree = "<group>"; };
 		SRCTST015 /* RuleEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngineTests.swift; sourceTree = "<group>"; };
 		SRCTST016 /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
+		SRCTST017 /* CategoryMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMatcherTests.swift; sourceTree = "<group>"; };
+		SRCTST018 /* ErrorStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateTests.swift; sourceTree = "<group>"; };
+		SRCUTL001 /* NetWorthCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCalculator.swift; sourceTree = "<group>"; };
+		SRCUTL002 /* MonthlyIncomeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyIncomeCalculator.swift; sourceTree = "<group>"; };
+		SRCUTL003 /* SyncRateLimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncRateLimiter.swift; sourceTree = "<group>"; };
+		SRCUTL004 /* AccountBalanceDelta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceDelta.swift; sourceTree = "<group>"; };
+		SRCUTL005 /* TransactionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilter.swift; sourceTree = "<group>"; };
+		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
+		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
+		SRCUTL008 /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
+		SRCUTL009 /* CategoryMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMatcher.swift; sourceTree = "<group>"; };
+		SRCVW001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		SRCVW002 /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		SRCVW003 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		SRCVW004 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		SRCVW005 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		SRCVW006 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		SRCVW007 /* TokenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEntryView.swift; sourceTree = "<group>"; };
+		SRCVW009 /* AccountDiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDiscoveryView.swift; sourceTree = "<group>"; };
+		SRCVW010 /* ClassificationReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationReviewView.swift; sourceTree = "<group>"; };
+		SRCVW011 /* NetWorthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthCard.swift; sourceTree = "<group>"; };
+		SRCVW012 /* NetMonthlyIncomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetMonthlyIncomeCard.swift; sourceTree = "<group>"; };
+		SRCVW013 /* SyncStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusBar.swift; sourceTree = "<group>"; };
+		SRCVW014 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
+		SRCVW015 /* TransactionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailSheet.swift; sourceTree = "<group>"; };
+		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
+		SRCVW017 /* NetWorthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthChartView.swift; sourceTree = "<group>"; };
+		SRCVW018 /* IncomeExpenseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseChartView.swift; sourceTree = "<group>"; };
+		SRCVW019 /* CategoryBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBreakdownView.swift; sourceTree = "<group>"; };
+		SRCVW020 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
+		SRCVW021 /* RulesManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesManagementView.swift; sourceTree = "<group>"; };
+		SRCVW022 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		SRCVW023 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		SRCVW024 /* CustomDatePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePickerSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		ROOT = {
-			isa = PBXGroup;
-			children = (
-				GRPAPP /* GhostVault */,
-				GRPTESTS /* GhostVaultTests */,
-				GRPPROD /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		GRPPROD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				PROD001 /* GhostVault.app */,
-				PROD002 /* GhostVaultTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		GRPAPP /* GhostVault */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,30 +166,6 @@
 			path = GhostVault;
 			sourceTree = "<group>";
 		};
-		GRPTESTS /* GhostVaultTests */ = {
-			isa = PBXGroup;
-			children = (
-				SRCTST001 /* GhostVaultTests.swift */,
-				SRCTST002 /* AccountTests.swift */,
-				SRCTST003 /* TransactionTests.swift */,
-				SRCTST004 /* CategoryTests.swift */,
-				SRCTST005 /* SimpleFINServiceTests.swift */,
-				SRCTST006 /* TokenValidatorTests.swift */,
-				SRCTST007 /* AccountFilterTests.swift */,
-				SRCTST008 /* NetWorthCalculatorTests.swift */,
-				SRCTST009 /* MonthlyIncomeCalculatorTests.swift */,
-				SRCTST010 /* SyncRateLimiterTests.swift */,
-				SRCTST011 /* AccountBalanceDeltaTests.swift */,
-				SRCTST012 /* TransactionFilterTests.swift */,
-				SRCTST013 /* TransferDetectorTests.swift */,
-				SRCTST014 /* IncomeDetectorTests.swift */,
-				SRCTST015 /* RuleEngineTests.swift */,
-				SRCTST016 /* SnapshotTests.swift */,
-				SRCTST017 /* CategoryMatcherTests.swift */,
-			);
-			path = GhostVaultTests;
-			sourceTree = "<group>";
-		};
 		GRPAPPCORE /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,97 +173,6 @@
 				SRC002 /* ContentView.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		GRPVIEWS /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				GRPVWDASH /* Dashboard */,
-				GRPVWACC /* Accounts */,
-				GRPVWTXN /* Transactions */,
-				GRPVWSET /* Settings */,
-				GRPVWONB /* Onboarding */,
-				GRPVWCOMP /* Components */,
-				GRPVWCHRT /* Charts */,
-				GRPVWCAT /* Categories */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		GRPVWDASH /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW001 /* DashboardView.swift */,
-				SRCVW011 /* NetWorthCard.swift */,
-				SRCVW012 /* NetMonthlyIncomeCard.swift */,
-				SRCVW013 /* SyncStatusBar.swift */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		GRPVWACC /* Accounts */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW002 /* AccountsView.swift */,
-				SRCVW014 /* AccountDetailView.swift */,
-			);
-			path = Accounts;
-			sourceTree = "<group>";
-		};
-		GRPVWTXN /* Transactions */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW003 /* TransactionsView.swift */,
-				SRCVW015 /* TransactionDetailSheet.swift */,
-				SRCVW016 /* TransactionFilterSheet.swift */,
-			);
-			path = Transactions;
-			sourceTree = "<group>";
-		};
-		GRPVWSET /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW004 /* SettingsView.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		GRPVWONB /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW005 /* OnboardingView.swift */,
-				SRCVW006 /* WelcomeView.swift */,
-				SRCVW007 /* TokenEntryView.swift */,
-				SRCVW008 /* SimpleFINWebView.swift */,
-				SRCVW009 /* AccountDiscoveryView.swift */,
-				SRCVW010 /* ClassificationReviewView.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		GRPVWCOMP /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		GRPVWCHRT /* Charts */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW017 /* NetWorthChartView.swift */,
-				SRCVW018 /* IncomeExpenseChartView.swift */,
-			);
-			path = Charts;
-			sourceTree = "<group>";
-		};
-		GRPVWCAT /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				SRCVW019 /* CategoryBreakdownView.swift */,
-				SRCVW020 /* CategoryDetailView.swift */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		GRPMODELS /* Models */ = {
@@ -335,6 +187,23 @@
 				SRCMOD007 /* MonthlySnapshot.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		GRPPROD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				PROD001 /* GhostVault.app */,
+				PROD002 /* GhostVaultTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		GRPRES /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				RES001 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		GRPSERVICES /* Services */ = {
@@ -372,6 +241,31 @@
 			path = Sync;
 			sourceTree = "<group>";
 		};
+		GRPTESTS /* GhostVaultTests */ = {
+			isa = PBXGroup;
+			children = (
+				SRCTST001 /* GhostVaultTests.swift */,
+				SRCTST002 /* AccountTests.swift */,
+				SRCTST003 /* TransactionTests.swift */,
+				SRCTST004 /* CategoryTests.swift */,
+				SRCTST005 /* SimpleFINServiceTests.swift */,
+				SRCTST006 /* TokenValidatorTests.swift */,
+				SRCTST007 /* AccountFilterTests.swift */,
+				SRCTST008 /* NetWorthCalculatorTests.swift */,
+				SRCTST009 /* MonthlyIncomeCalculatorTests.swift */,
+				SRCTST010 /* SyncRateLimiterTests.swift */,
+				SRCTST011 /* AccountBalanceDeltaTests.swift */,
+				SRCTST012 /* TransactionFilterTests.swift */,
+				SRCTST013 /* TransferDetectorTests.swift */,
+				SRCTST014 /* IncomeDetectorTests.swift */,
+				SRCTST015 /* RuleEngineTests.swift */,
+				SRCTST016 /* SnapshotTests.swift */,
+				SRCTST017 /* CategoryMatcherTests.swift */,
+				SRCTST018 /* ErrorStateTests.swift */,
+			);
+			path = GhostVaultTests;
+			sourceTree = "<group>";
+		};
 		GRPUTILS /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,12 +282,107 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		GRPRES /* Resources */ = {
+		GRPVIEWS /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				RES001 /* Assets.xcassets */,
+				GRPVWDASH /* Dashboard */,
+				GRPVWACC /* Accounts */,
+				GRPVWTXN /* Transactions */,
+				GRPVWSET /* Settings */,
+				GRPVWONB /* Onboarding */,
+				GRPVWCOMP /* Components */,
+				GRPVWCHRT /* Charts */,
+				GRPVWCAT /* Categories */,
 			);
-			path = Resources;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		GRPVWACC /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW002 /* AccountsView.swift */,
+				SRCVW014 /* AccountDetailView.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		GRPVWCAT /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW019 /* CategoryBreakdownView.swift */,
+				SRCVW020 /* CategoryDetailView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		GRPVWCHRT /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW017 /* NetWorthChartView.swift */,
+				SRCVW018 /* IncomeExpenseChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		GRPVWCOMP /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW024 /* CustomDatePickerSheet.swift */,
+				SRCVW022 /* EmptyStateView.swift */,
+				SRCVW023 /* ErrorStateView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		GRPVWDASH /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW001 /* DashboardView.swift */,
+				SRCVW011 /* NetWorthCard.swift */,
+				SRCVW012 /* NetMonthlyIncomeCard.swift */,
+				SRCVW013 /* SyncStatusBar.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		GRPVWONB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW005 /* OnboardingView.swift */,
+				SRCVW006 /* WelcomeView.swift */,
+				SRCVW007 /* TokenEntryView.swift */,
+				SRCVW009 /* AccountDiscoveryView.swift */,
+				SRCVW010 /* ClassificationReviewView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		GRPVWSET /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW004 /* SettingsView.swift */,
+				SRCVW021 /* RulesManagementView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		GRPVWTXN /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW003 /* TransactionsView.swift */,
+				SRCVW015 /* TransactionDetailSheet.swift */,
+				SRCVW016 /* TransactionFilterSheet.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		ROOT = {
+			isa = PBXGroup;
+			children = (
+				GRPAPP /* GhostVault */,
+				GRPTESTS /* GhostVaultTests */,
+				GRPPROD /* Products */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +390,7 @@
 /* Begin PBXNativeTarget section */
 		TGT001 /* GhostVault */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BLDCFGLST001;
+			buildConfigurationList = BLDCFGLST001 /* Build configuration list for PBXNativeTarget "GhostVault" */;
 			buildPhases = (
 				BP001 /* Sources */,
 				BP002 /* Resources */,
@@ -417,7 +406,7 @@
 		};
 		TGT002 /* GhostVaultTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BLDCFGLST002;
+			buildConfigurationList = BLDCFGLST002 /* Build configuration list for PBXNativeTarget "GhostVaultTests" */;
 			buildPhases = (
 				BP003 /* Sources */,
 			);
@@ -450,7 +439,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BLDCFGLSTPROJ;
+			buildConfigurationList = BLDCFGLSTPROJ /* Build configuration list for PBXProject "GhostVault" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -468,6 +457,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BP002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				APP003 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BP001 /* Sources */ = {
@@ -491,7 +491,6 @@
 				VW005 /* OnboardingView.swift in Sources */,
 				VW006 /* WelcomeView.swift in Sources */,
 				VW007 /* TokenEntryView.swift in Sources */,
-				VW008 /* SimpleFINWebView.swift in Sources */,
 				VW009 /* AccountDiscoveryView.swift in Sources */,
 				VW010 /* ClassificationReviewView.swift in Sources */,
 				VW011 /* NetWorthCard.swift in Sources */,
@@ -516,6 +515,10 @@
 				VW019 /* CategoryBreakdownView.swift in Sources */,
 				UTL009 /* CategoryMatcher.swift in Sources */,
 				VW020 /* CategoryDetailView.swift in Sources */,
+				VW021 /* RulesManagementView.swift in Sources */,
+				VW022 /* EmptyStateView.swift in Sources */,
+				VW023 /* ErrorStateView.swift in Sources */,
+				VW024 /* CustomDatePickerSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,21 +543,11 @@
 				TST015 /* RuleEngineTests.swift in Sources */,
 				TST016 /* SnapshotTests.swift in Sources */,
 				TST017 /* CategoryMatcherTests.swift in Sources */,
+				TST018 /* ErrorStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXResourcesBuildPhase section */
-		BP002 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				APP003 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		DEP001 /* PBXTargetDependency */ = {
@@ -641,6 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KFDNEQ68KH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GhostVault/Info.plist;
@@ -673,6 +667,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = KFDNEQ68KH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GhostVault/Info.plist;
@@ -735,15 +730,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BLDCFGLSTPROJ /* Build configuration list for PBXProject "GhostVault" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BLDCFGDBG /* Debug */,
-				BLDCFGREL /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BLDCFGLST001 /* Build configuration list for PBXNativeTarget "GhostVault" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -758,6 +744,15 @@
 			buildConfigurations = (
 				BLDCFGTSTDBG /* Debug */,
 				BLDCFGTSTREL /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BLDCFGLSTPROJ /* Build configuration list for PBXProject "GhostVault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BLDCFGDBG /* Debug */,
+				BLDCFGREL /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

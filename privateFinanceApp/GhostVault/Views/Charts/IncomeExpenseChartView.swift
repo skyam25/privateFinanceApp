@@ -80,7 +80,12 @@ struct IncomeExpenseChartView: View {
         .navigationTitle("Income & Expenses")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showCustomDatePicker) {
-            customDatePickerSheet
+            CustomDatePickerSheet(
+                customStartDate: $customStartDate,
+                customEndDate: $customEndDate,
+                selectedTimeframe: $selectedTimeframe,
+                isPresented: $showCustomDatePicker
+            )
         }
     }
 
@@ -346,49 +351,6 @@ struct IncomeExpenseChartView: View {
             .background(Color(.systemGray6))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         )
-    }
-
-    // MARK: - Custom Date Picker Sheet
-
-    private var customDatePickerSheet: some View {
-        NavigationStack {
-            Form {
-                Section("Date Range") {
-                    DatePicker(
-                        "Start Date",
-                        selection: $customStartDate,
-                        in: ...customEndDate,
-                        displayedComponents: .date
-                    )
-
-                    DatePicker(
-                        "End Date",
-                        selection: $customEndDate,
-                        in: customStartDate...,
-                        displayedComponents: .date
-                    )
-                }
-
-                Section {
-                    Button("Apply") {
-                        selectedTimeframe = .custom
-                        showCustomDatePicker = false
-                    }
-                    .frame(maxWidth: .infinity)
-                    .buttonStyle(.borderedProminent)
-                }
-            }
-            .navigationTitle("Custom Range")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") {
-                        showCustomDatePicker = false
-                    }
-                }
-            }
-        }
-        .presentationDetents([.medium])
     }
 
     // MARK: - Computed Properties
