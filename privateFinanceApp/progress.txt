@@ -1,8 +1,8 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P5 - Business Logic Complete
-- **Current Task:** P6-T1 next
+- **Phase:** P6 - Trend Charts (In Progress)
+- **Current Task:** P6-T2 next
 - **Last Updated:** 2026-01-18
 
 ---
@@ -407,6 +407,25 @@ All 3 Business Logic tasks complete. Phase 6 (Trend Charts) next.
 
 ---
 
+### P6-T1: Historical Snapshot Storage
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Models/DailySnapshot.swift
+  - GhostVault/Models/MonthlySnapshot.swift
+  - GhostVaultTests/SnapshotTests.swift (22 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - DailySnapshot SwiftData model with date, netWorth, totalAssets, totalLiabilities
+  - DailySnapshotManager utility for creating/querying snapshots
+  - MonthlySnapshot SwiftData model with year, month, totalIncome, totalExpenses, netIncome
+  - MonthlySnapshotManager utility for creating/querying monthly snapshots
+  - Decimal precision maintained via string storage
+  - Date normalization for DailySnapshot to startOfDay
+  - Build and 354 tests pass
+
+---
+
 ## In Progress
 
 (none)
@@ -423,7 +442,7 @@ All 3 Business Logic tasks complete. Phase 6 (Trend Charts) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 20 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5 complete)
+- Completed: 21 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5 complete, P6-T1 complete)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 332 passing
+- Total tests: 354 passing
