@@ -237,9 +237,25 @@ All 4 Dashboard tasks complete. Phase 3 (Account Management) next.
 
 ---
 
+### P3-T1: Account List View
+- Status: COMPLETE
+- Files modified:
+  - GhostVault/Views/Accounts/AccountsView.swift
+- Notes:
+  - Accounts grouped by organization/institution name
+  - Each group shows total balance in section header
+  - AccountRowView with color-coded balance (green for assets, red for liabilities)
+  - Account type icon in colored circle
+  - Hidden account indicator
+  - Navigation to placeholder detail view (P3-T2)
+  - SwiftUI previews with sample data and empty state
+  - Build and 157 tests pass
+
+---
+
 ## In Progress
 
-(P3-T1 next)
+(P3-T2 next)
 
 ---
 

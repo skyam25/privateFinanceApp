@@ -251,7 +251,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Tap navigates to account detail",
     "SwiftUI preview with sample data"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

@@ -159,23 +159,8 @@ When all 31 tasks have "passes": true:
 ## Run Command
 
 Reference this file directly:
-```bash
-/ralph-loop "@RALPH_PROMPT.md" --max-iterations 50 --completion-promise "MVP_COMPLETE"
-```
+"@RALPH_PROMPT.md" 
 
-Or for a single phase at a time (recommended for HITL mode):
-```bash
-# Phase 0: Test Infrastructure
-/ralph-loop "@RALPH_PROMPT.md Focus only on Phase 0 tasks" --max-iterations 10 --completion-promise "P0_COMPLETE"
-
-# Phase 1: Onboarding
-/ralph-loop "@RALPH_PROMPT.md Focus only on Phase 1 tasks" --max-iterations 15 --completion-promise "P1_COMPLETE"
-
-# Phase 2: Dashboard
-/ralph-loop "@RALPH_PROMPT.md Focus only on Phase 2 tasks" --max-iterations 12 --completion-promise "P2_COMPLETE"
-```
-
----
 
 ## Progress Files
 
@@ -203,42 +188,3 @@ This prompt will create/update:
 **Total: 31 tasks across 10 phases**
 
 ---
-
-## Recommended Execution Strategy
-
-### Option 1: Full AFK Run (Experienced)
-```bash
-/ralph-loop "@RALPH_PROMPT.md" --max-iterations 50 --completion-promise "MVP_COMPLETE"
-```
-Let it run through all phases autonomously. Check progress.txt periodically.
-
-### Option 2: Phase-by-Phase HITL (Recommended)
-Run each phase separately, review between phases:
-```bash
-# Start with test infrastructure
-/ralph-loop "@RALPH_PROMPT.md Complete Phase 0 only" --max-iterations 10 --completion-promise "P0_COMPLETE"
-
-# Review, then continue to onboarding
-/ralph-loop "@RALPH_PROMPT.md Complete Phase 1 only" --max-iterations 15 --completion-promise "P1_COMPLETE"
-
-# Continue through phases...
-```
-
-### Option 3: Task-by-Task (Maximum Control)
-```bash
-/ralph-loop "@RALPH_PROMPT.md Complete only task P0-T1" --max-iterations 5 --completion-promise "TASK_COMPLETE"
-```
-
----
-
-## Recovery from Interruption
-
-If the loop is interrupted, simply restart with the same command. The prompt reads progress.txt to determine where to resume.
-
-```bash
-# Check current state
-cat progress.txt | head -30
-
-# Resume execution
-/ralph-loop "@RALPH_PROMPT.md" --max-iterations 50 --completion-promise "MVP_COMPLETE"
-```
