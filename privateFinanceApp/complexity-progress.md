@@ -21,8 +21,14 @@
 - Technique: Dictionary lookup (categoryColorMap) + shared function extraction
 - Tests: PASS
 
-Remaining violations after iteration 3: 4
-- Transaction.swift:144 (complexity 12)
+## Iteration 4
+- Violations found: 4
+- Fixed: Transaction.swift - TransactionCategory.icon(for:)
+- Original complexity: 12 → New: 1 (below threshold)
+- Technique: Dictionary lookup (iconMap) replacing switch statement
+- Tests: PASS
+
+Remaining violations after iteration 4: 3
 - TransactionDetailSheet.swift:357 (complexity 12)
 - SimpleFINServiceTests.swift:655 (complexity 12)
 - ClassificationReviewView.swift:339 (complexity 11)

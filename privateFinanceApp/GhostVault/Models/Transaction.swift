@@ -141,32 +141,21 @@ enum ClassificationType: String, CaseIterable {
 // MARK: - Transaction Category Helper
 
 enum TransactionCategory {
+    private static let iconMap: [String: String] = [
+        "food & dining": "fork.knife", "food": "fork.knife", "dining": "fork.knife", "restaurants": "fork.knife",
+        "shopping": "bag",
+        "transportation": "car", "auto": "car", "gas": "car",
+        "bills & utilities": "bolt", "bills": "bolt", "utilities": "bolt",
+        "entertainment": "tv",
+        "health & fitness": "heart", "health": "heart", "medical": "heart",
+        "travel": "airplane",
+        "income": "arrow.down.circle", "salary": "arrow.down.circle",
+        "transfer": "arrow.left.arrow.right",
+        "groceries": "cart",
+        "subscriptions": "repeat"
+    ]
+
     static func icon(for category: String) -> String {
-        switch category.lowercased() {
-        case "food & dining", "food", "dining", "restaurants":
-            return "fork.knife"
-        case "shopping":
-            return "bag"
-        case "transportation", "auto", "gas":
-            return "car"
-        case "bills & utilities", "bills", "utilities":
-            return "bolt"
-        case "entertainment":
-            return "tv"
-        case "health & fitness", "health", "medical":
-            return "heart"
-        case "travel":
-            return "airplane"
-        case "income", "salary":
-            return "arrow.down.circle"
-        case "transfer":
-            return "arrow.left.arrow.right"
-        case "groceries":
-            return "cart"
-        case "subscriptions":
-            return "repeat"
-        default:
-            return "questionmark.circle"
-        }
+        iconMap[category.lowercased()] ?? "questionmark.circle"
     }
 }
