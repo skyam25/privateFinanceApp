@@ -2,45 +2,175 @@
 //  OnboardingView.swift
 //  GhostVault
 //
-//  Onboarding flow - UI to be defined
+//  Multi-page onboarding flow
+//  Page 1: Welcome - privacy pitch
+//  Page 2: Token entry or SimpleFIN signup
+//  Page 3: Account discovery
+//  Page 4: Classification review
 //
 
 import SwiftUI
 
 struct OnboardingView: View {
     @EnvironmentObject var appState: AppState
+    @State private var currentPage: OnboardingPage = .welcome
 
     var body: some View {
-        // TODO: Design onboarding flow
-        // Page 1: Welcome - privacy pitch
-        // Page 2: How it works - SimpleFIN explanation
-        // Page 3: Connect - token entry or SimpleFIN signup
-        VStack(spacing: 24) {
-            Spacer()
+        NavigationStack {
+            Group {
+                switch currentPage {
+                case .welcome:
+                    WelcomeView {
+                        withAnimation {
+                            currentPage = .tokenEntry
+                        }
+                    }
 
-            Image(systemName: "shield.lefthalf.filled")
-                .font(.system(size: 80))
-                .foregroundStyle(.accent)
+                case .tokenEntry:
+                    // Placeholder until P1-T2
+                    TokenEntryPlaceholderView {
+                        withAnimation {
+                            currentPage = .accountDiscovery
+                        }
+                    } onBack: {
+                        withAnimation {
+                            currentPage = .welcome
+                        }
+                    }
 
-            Text("GhostVault")
-                .font(.largeTitle.bold())
+                case .accountDiscovery:
+                    // Placeholder until P1-T4
+                    AccountDiscoveryPlaceholderView {
+                        withAnimation {
+                            currentPage = .classificationReview
+                        }
+                    } onBack: {
+                        withAnimation {
+                            currentPage = .tokenEntry
+                        }
+                    }
 
-            Text("Your finances. Your device. Your privacy.")
-                .foregroundStyle(.secondary)
-
-            Spacer()
-
-            Button("Get Started") {
-                appState.isOnboarded = true
+                case .classificationReview:
+                    // Placeholder until P1-T5
+                    ClassificationReviewPlaceholderView {
+                        appState.isOnboarded = true
+                    } onBack: {
+                        withAnimation {
+                            currentPage = .accountDiscovery
+                        }
+                    }
+                }
             }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-
-            Spacer()
+            .transition(.asymmetric(
+                insertion: .move(edge: .trailing),
+                removal: .move(edge: .leading)
+            ))
         }
-        .padding()
     }
 }
+
+// MARK: - Onboarding Pages
+
+enum OnboardingPage {
+    case welcome
+    case tokenEntry
+    case accountDiscovery
+    case classificationReview
+}
+
+// MARK: - Placeholder Views (to be replaced in subsequent tasks)
+
+private struct TokenEntryPlaceholderView: View {
+    let onContinue: () -> Void
+    let onBack: () -> Void
+
+    var body: some View {
+        VStack(spacing: 24) {
+            Spacer()
+            Image(systemName: "key.fill")
+                .font(.system(size: 60))
+                .foregroundStyle(.accent)
+            Text("Connect to SimpleFIN")
+                .font(.title2.bold())
+            Text("Token entry screen coming in P1-T2")
+                .foregroundStyle(.secondary)
+            Spacer()
+            Button("Continue", action: onContinue)
+                .buttonStyle(.borderedProminent)
+        }
+        .padding()
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: onBack) {
+                    Image(systemName: "chevron.left")
+                }
+            }
+        }
+    }
+}
+
+private struct AccountDiscoveryPlaceholderView: View {
+    let onContinue: () -> Void
+    let onBack: () -> Void
+
+    var body: some View {
+        VStack(spacing: 24) {
+            Spacer()
+            Image(systemName: "building.columns.fill")
+                .font(.system(size: 60))
+                .foregroundStyle(.accent)
+            Text("Your Accounts")
+                .font(.title2.bold())
+            Text("Account discovery screen coming in P1-T4")
+                .foregroundStyle(.secondary)
+            Spacer()
+            Button("Continue", action: onContinue)
+                .buttonStyle(.borderedProminent)
+        }
+        .padding()
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: onBack) {
+                    Image(systemName: "chevron.left")
+                }
+            }
+        }
+    }
+}
+
+private struct ClassificationReviewPlaceholderView: View {
+    let onContinue: () -> Void
+    let onBack: () -> Void
+
+    var body: some View {
+        VStack(spacing: 24) {
+            Spacer()
+            Image(systemName: "tag.fill")
+                .font(.system(size: 60))
+                .foregroundStyle(.accent)
+            Text("Review Transactions")
+                .font(.title2.bold())
+            Text("Classification review screen coming in P1-T5")
+                .foregroundStyle(.secondary)
+            Spacer()
+            Button("Continue to Dashboard", action: onContinue)
+                .buttonStyle(.borderedProminent)
+        }
+        .padding()
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: onBack) {
+                    Image(systemName: "chevron.left")
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Preview
 
 #Preview {
     OnboardingView()

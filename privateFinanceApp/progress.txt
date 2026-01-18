@@ -1,8 +1,8 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P0 - Test Infrastructure COMPLETE
-- **Current Task:** P1-T1 (next)
+- **Phase:** P1 - Onboarding Flow
+- **Current Task:** P1-T2 (next)
 - **Last Updated:** 2026-01-17
 
 ---
@@ -62,9 +62,29 @@ All test infrastructure is in place with 77 passing tests.
 
 ---
 
+## Phase 1 Started - 2026-01-17
+
+### P1-T1: Welcome Screen UI
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Onboarding/WelcomeView.swift
+- Files modified:
+  - GhostVault/Views/Onboarding/OnboardingView.swift (multi-page flow)
+  - GhostVault.xcodeproj/project.pbxproj (added WelcomeView.swift)
+- Notes:
+  - WelcomeView shows app branding with shield icon
+  - Three FeatureRow components for privacy value props
+  - "Get Started" button triggers navigation to token entry
+  - SimpleFIN requirement note at bottom
+  - OnboardingView uses enum-based state machine for page navigation
+  - Placeholder views for P1-T2, P1-T4, P1-T5
+  - Build and 77 tests pass
+
+---
+
 ## In Progress
 
-(starting Phase 1 next)
+(P1-T2 next)
 
 ---
 
@@ -78,7 +98,7 @@ All test infrastructure is in place with 77 passing tests.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 3 (P0 complete)
+- Completed: 4 (P0 complete, P1-T1)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 77 passing
