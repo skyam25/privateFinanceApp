@@ -192,4 +192,86 @@ final class AccountTests: XCTestCase {
         XCTAssertEqual(account.availableBalance, "2400.00")
         XCTAssertEqual(account.balanceDate, balanceDate)
     }
+
+    // MARK: - Customization Tests
+
+    func testNicknameDefaultsToNil() {
+        let account = Account(id: "test-16", name: "Checking", balance: "100.00")
+        XCTAssertNil(account.nickname)
+    }
+
+    func testNicknamePersistence() {
+        let account = Account(id: "test-17", name: "Checking", balance: "100.00")
+        account.nickname = "My Primary Account"
+        XCTAssertEqual(account.nickname, "My Primary Account")
+    }
+
+    func testDisplayNameUsesNicknameWhenSet() {
+        let account = Account(id: "test-18", name: "Checking ****1234", balance: "100.00")
+        account.nickname = "Main Checking"
+        XCTAssertEqual(account.displayName, "Main Checking")
+    }
+
+    func testDisplayNameFallsBackToName() {
+        let account = Account(id: "test-19", name: "Checking ****1234", balance: "100.00")
+        XCTAssertEqual(account.displayName, "Checking ****1234")
+    }
+
+    func testIsHiddenDefaultsToFalse() {
+        let account = Account(id: "test-20", name: "Checking", balance: "100.00")
+        XCTAssertFalse(account.isHidden)
+    }
+
+    func testIsHiddenCanBeSet() {
+        let account = Account(id: "test-21", name: "Checking", balance: "100.00")
+        account.isHidden = true
+        XCTAssertTrue(account.isHidden)
+    }
+
+    func testTrackingOnlyDefaultsToFalse() {
+        let account = Account(id: "test-22", name: "Reference Account", balance: "100.00")
+        XCTAssertFalse(account.trackingOnly)
+    }
+
+    func testTrackingOnlyCanBeSet() {
+        let account = Account(id: "test-23", name: "Reference Account", balance: "100.00")
+        account.trackingOnly = true
+        XCTAssertTrue(account.trackingOnly)
+    }
+
+    func testIsExcludedFromTotals_HiddenAccount() {
+        let account = Account(id: "test-24", name: "Hidden", balance: "100.00", isHidden: true)
+        XCTAssertTrue(account.isExcludedFromTotals)
+    }
+
+    func testIsExcludedFromTotals_TrackingOnlyAccount() {
+        let account = Account(id: "test-25", name: "Tracking", balance: "100.00", trackingOnly: true)
+        XCTAssertTrue(account.isExcludedFromTotals)
+    }
+
+    func testIsExcludedFromTotals_NormalAccount() {
+        let account = Account(id: "test-26", name: "Normal", balance: "100.00")
+        XCTAssertFalse(account.isExcludedFromTotals)
+    }
+
+    func testIsExcludedFromTotals_BothHiddenAndTrackingOnly() {
+        let account = Account(id: "test-27", name: "Both", balance: "100.00", isHidden: true, trackingOnly: true)
+        XCTAssertTrue(account.isExcludedFromTotals)
+    }
+
+    func testDisplayOrderDefaultsToZero() {
+        let account = Account(id: "test-28", name: "Account", balance: "100.00")
+        XCTAssertEqual(account.displayOrder, 0)
+    }
+
+    func testDisplayOrderCanBeSet() {
+        let account = Account(id: "test-29", name: "Account", balance: "100.00")
+        account.displayOrder = 5
+        XCTAssertEqual(account.displayOrder, 5)
+    }
+
+    func testDisplayOrderInitialization() {
+        let account = Account(id: "test-30", name: "Account", balance: "100.00", displayOrder: 3)
+        XCTAssertEqual(account.displayOrder, 3)
+    }
 }

@@ -283,7 +283,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Drag-to-reorder accounts within groups",
     "Unit test for nickname persistence"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

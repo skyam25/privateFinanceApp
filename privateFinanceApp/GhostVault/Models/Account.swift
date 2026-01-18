@@ -19,10 +19,17 @@ final class Account {
     var availableBalance: String?
     var balanceDate: Date?
     var accountTypeRaw: String
-    var isHidden: Bool // Whether to exclude from totals
+    var isHidden: Bool // Whether to completely hide from UI
+    var trackingOnly: Bool // Visible but excluded from totals (for reference accounts)
+    var displayOrder: Int // Order within institution group (for custom sorting)
     var nickname: String? // User-defined display name
     var previousBalance: String? // Balance from last sync for delta calculation
     var lastSyncDate: Date? // When the account was last synced
+
+    /// Whether this account should be excluded from net worth calculations
+    var isExcludedFromTotals: Bool {
+        isHidden || trackingOnly
+    }
 
     // Computed properties
     var balanceValue: Decimal {
@@ -60,6 +67,8 @@ final class Account {
         balanceDate: Date? = nil,
         accountTypeRaw: String = "unknown",
         isHidden: Bool = false,
+        trackingOnly: Bool = false,
+        displayOrder: Int = 0,
         nickname: String? = nil,
         previousBalance: String? = nil,
         lastSyncDate: Date? = nil
@@ -74,6 +83,8 @@ final class Account {
         self.balanceDate = balanceDate
         self.accountTypeRaw = accountTypeRaw
         self.isHidden = isHidden
+        self.trackingOnly = trackingOnly
+        self.displayOrder = displayOrder
         self.nickname = nickname
         self.previousBalance = previousBalance
         self.lastSyncDate = lastSyncDate

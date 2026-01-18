@@ -79,6 +79,7 @@ struct AccountDetailView: View {
             // Settings section
             Section {
                 nicknameRow
+                trackingOnlyRow
                 hideToggleRow
             } header: {
                 Text("Account Settings")
@@ -261,8 +262,25 @@ struct AccountDetailView: View {
 
     private var hideToggleRow: some View {
         Toggle(isOn: $account.isHidden) {
-            Label("Hide from Totals", systemImage: "eye.slash")
+            VStack(alignment: .leading, spacing: 2) {
+                Label("Hidden", systemImage: "eye.slash")
+                Text("Completely hide from all views")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
+    }
+
+    private var trackingOnlyRow: some View {
+        Toggle(isOn: $account.trackingOnly) {
+            VStack(alignment: .leading, spacing: 2) {
+                Label("Tracking Only", systemImage: "chart.bar.doc.horizontal")
+                Text("Show in list but exclude from totals")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .disabled(account.isHidden) // Can't be tracking only if hidden
     }
 
     // MARK: - Helpers

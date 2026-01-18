@@ -1,8 +1,8 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P3 - Account Management
-- **Current Task:** P3-T3 (next)
+- **Phase:** P4 - Transaction View
+- **Current Task:** P4-T1 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -271,6 +271,28 @@ All 4 Dashboard tasks complete. Phase 3 (Account Management) next.
   - SwiftUI previews for different account types
   - Build and 177 tests pass
 
+### P3-T3: Account Customization
+- Status: COMPLETE
+- Files modified:
+  - GhostVault/Models/Account.swift (added trackingOnly, displayOrder, isExcludedFromTotals)
+  - GhostVault/Views/Accounts/AccountDetailView.swift (added tracking only toggle)
+  - GhostVault/Views/Accounts/AccountsView.swift (drag-to-reorder, tracking indicator)
+  - GhostVault/Utilities/NetWorthCalculator.swift (use isExcludedFromTotals)
+  - GhostVaultTests/AccountTests.swift (15 new tests)
+- Notes:
+  - Tracking Only mode: account visible but excluded from totals
+  - Drag-to-reorder accounts within institution groups
+  - displayOrder persisted to SwiftData
+  - AccountRowView now shows balance delta and tracking indicator
+  - Hidden accounts now filtered from list view (not just totals)
+  - Build and 192 tests pass
+
+---
+
+## Phase 3 Complete - 2026-01-18
+
+All 3 Account Management tasks complete. Phase 4 (Transaction View) next.
+
 ---
 
 ## In Progress
@@ -289,7 +311,7 @@ All 4 Dashboard tasks complete. Phase 3 (Account Management) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 13 (P0 complete, P1 complete, P2 complete, P3-T1, P3-T2)
+- Completed: 14 (P0 complete, P1 complete, P2 complete, P3 complete)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 177 passing
+- Total tests: 192 passing

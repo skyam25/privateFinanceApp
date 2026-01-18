@@ -11,6 +11,7 @@ import SwiftData
 struct AccountsView: View {
     @Environment(\.modelContext) private var modelContext
     @Query(sort: \Account.organizationName) private var accounts: [Account]
+    @State private var editMode: EditMode = .inactive
 
     var body: some View {
         NavigationStack {
@@ -22,6 +23,12 @@ struct AccountsView: View {
                 }
             }
             .navigationTitle("Accounts")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    EditButton()
+                }
+            }
+            .environment(\.editMode, $editMode)
         }
     }
 
@@ -46,6 +53,9 @@ struct AccountsView: View {
                             AccountRowView(account: account)
                         }
                     }
+                    .onMove { from, to in
+                        moveAccounts(in: group.key, from: from, to: to)
+                    }
                 } header: {
                     HStack {
                         Text(group.key)
@@ -63,20 +73,44 @@ struct AccountsView: View {
         }
     }
 
+    // MARK: - Reordering
+
+    private func moveAccounts(in groupKey: String, from source: IndexSet, to destination: Int) {
+        // Get accounts for this group, sorted by displayOrder
+        var groupAccounts = accounts
+            .filter { ($0.organizationName ?? "Unknown Institution") == groupKey }
+            .sorted { $0.displayOrder < $1.displayOrder }
+
+        // Perform the move
+        groupAccounts.move(fromOffsets: source, toOffset: destination)
+
+        // Update displayOrder for all accounts in the group
+        for (index, account) in groupAccounts.enumerated() {
+            account.displayOrder = index
+        }
+    }
+
     // MARK: - Grouping
 
     private var groupedAccounts: [(key: String, value: [Account])] {
-        let grouped = Dictionary(grouping: accounts) { account in
+        // Filter out hidden accounts from the list view
+        let visibleAccounts = accounts.filter { !$0.isHidden }
+
+        let grouped = Dictionary(grouping: visibleAccounts) { account in
             account.organizationName ?? "Unknown Institution"
         }
-        return grouped.sorted { $0.key < $1.key }
+
+        // Sort groups alphabetically, and accounts within groups by displayOrder
+        return grouped
+            .map { (key: $0.key, value: $0.value.sorted { $0.displayOrder < $1.displayOrder }) }
+            .sorted { $0.key < $1.key }
     }
 
     // MARK: - Formatting
 
     private func formatGroupBalance(_ accounts: [Account]) -> String {
         let total = accounts
-            .filter { !$0.isHidden }
+            .filter { !$0.isExcludedFromTotals }
             .reduce(Decimal.zero) { $0 + $1.balanceValue }
 
         let formatter = NumberFormatter()
@@ -115,10 +149,10 @@ struct AccountRowView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
 
-                    if account.isHidden {
-                        Text("• Hidden")
+                    if account.trackingOnly {
+                        Text("• Tracking")
                             .font(.caption)
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(.blue)
                     }
                 }
             }
@@ -171,8 +205,9 @@ struct AccountRowView: View {
     }
 
     private var deltaSinceLastSync: String? {
-        // Placeholder for delta - will be implemented in P3-T2
-        nil
+        guard let delta = AccountBalanceDelta.calculate(for: account),
+              !delta.isZero else { return nil }
+        return AccountBalanceDelta.formatDelta(delta, currencyCode: account.currency ?? "USD")
     }
 }
 

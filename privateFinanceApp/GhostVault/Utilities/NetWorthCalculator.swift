@@ -33,8 +33,8 @@ struct NetWorthCalculator {
         var totalLiabilities: Decimal = 0
 
         for account in accounts {
-            // Skip hidden accounts
-            guard !account.isHidden else { continue }
+            // Skip accounts excluded from totals (hidden or tracking only)
+            guard !account.isExcludedFromTotals else { continue }
 
             let balance = account.balanceValue
 
