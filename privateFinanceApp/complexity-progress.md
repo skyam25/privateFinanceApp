@@ -28,7 +28,13 @@
 - Technique: Dictionary lookup (iconMap) replacing switch statement
 - Tests: PASS
 
-Remaining violations after iteration 4: 3
-- TransactionDetailSheet.swift:357 (complexity 12)
+## Iteration 5
+- Violations found: 3
+- Fixed: TransactionDetailSheet.swift - CategoryPickerSheet.categoryColor(for:)
+- Original complexity: 12 → New: 1 (below threshold)
+- Technique: Static dictionary lookup (categoryColorMap) replacing switch statement
+- Tests: BUILD SUCCEEDED
+
+Remaining violations after iteration 5: 2
 - SimpleFINServiceTests.swift:655 (complexity 12)
 - ClassificationReviewView.swift:339 (complexity 11)

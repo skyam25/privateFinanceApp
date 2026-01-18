@@ -354,21 +354,22 @@ struct CategoryPickerSheet: View {
         }
     }
 
+    private static let categoryColorMap: [String: Color] = [
+        "income": .green,
+        "transfer": .blue,
+        "groceries": .teal,
+        "dining": .orange,
+        "shopping": .purple,
+        "transportation": .indigo,
+        "bills & utilities": .yellow,
+        "entertainment": .pink,
+        "health & fitness": .red,
+        "travel": .cyan,
+        "subscriptions": .mint
+    ]
+
     private func categoryColor(for category: String) -> Color {
-        switch category.lowercased() {
-        case "income": return .green
-        case "transfer": return .blue
-        case "groceries": return .teal
-        case "dining": return .orange
-        case "shopping": return .purple
-        case "transportation": return .indigo
-        case "bills & utilities": return .yellow
-        case "entertainment": return .pink
-        case "health & fitness": return .red
-        case "travel": return .cyan
-        case "subscriptions": return .mint
-        default: return .gray
-        }
+        Self.categoryColorMap[category.lowercased()] ?? .gray
     }
 }
 
