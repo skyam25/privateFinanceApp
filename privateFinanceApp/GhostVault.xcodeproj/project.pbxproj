@@ -32,6 +32,7 @@
 		VW005 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW005; };
 		VW006 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW006; };
 		VW007 /* TokenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW007; };
+		VW008 /* SimpleFINWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW008; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -81,6 +82,7 @@
 		SRCVW005 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		SRCVW006 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		SRCVW007 /* TokenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenEntryView.swift; sourceTree = "<group>"; };
+		SRCVW008 /* SimpleFINWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFINWebView.swift; sourceTree = "<group>"; };
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				SRCVW005 /* OnboardingView.swift */,
 				SRCVW006 /* WelcomeView.swift */,
 				SRCVW007 /* TokenEntryView.swift */,
+				SRCVW008 /* SimpleFINWebView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				VW005 /* OnboardingView.swift in Sources */,
 				VW006 /* WelcomeView.swift in Sources */,
 				VW007 /* TokenEntryView.swift in Sources */,
+				VW008 /* SimpleFINWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P1 - Onboarding Flow
-- **Current Task:** P1-T3 (next)
+- **Current Task:** P1-T4 (next)
 - **Last Updated:** 2026-01-17
 
 ---
@@ -98,11 +98,27 @@ All test infrastructure is in place with 77 passing tests.
   - Integration with SimpleFINService and KeychainService
   - Build and 90 tests pass
 
+### P1-T3: SimpleFIN WebView Integration
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Onboarding/SimpleFINWebView.swift
+- Files modified:
+  - GhostVault/Views/Onboarding/OnboardingView.swift (added webView page)
+  - GhostVault.xcodeproj/project.pbxproj (added SimpleFINWebView)
+- Notes:
+  - WKWebView loads SimpleFIN create account page
+  - Token detection via URL patterns (/token/, query params, fragment)
+  - JavaScript injection to scan page content for tokens
+  - Auto-validates detected tokens and proceeds to account discovery
+  - Manual Paste button falls back to token entry screen
+  - Cancel button returns to token entry
+  - Build and 90 tests pass
+
 ---
 
 ## In Progress
 
-(P1-T3 next)
+(P1-T4 next)
 
 ---
 
@@ -116,7 +132,7 @@ All test infrastructure is in place with 77 passing tests.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 5 (P0 complete, P1-T1, P1-T2)
+- Completed: 6 (P0 complete, P1-T1, P1-T2, P1-T3)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 90 passing

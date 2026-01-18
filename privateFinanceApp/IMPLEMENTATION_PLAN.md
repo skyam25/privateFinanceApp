@@ -131,7 +131,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Dismiss WebView and proceed to validation",
     "Fallback to manual paste if auto-detect fails"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

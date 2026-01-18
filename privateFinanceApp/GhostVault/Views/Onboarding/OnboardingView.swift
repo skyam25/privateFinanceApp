@@ -15,6 +15,9 @@ struct OnboardingView: View {
     @EnvironmentObject var appState: AppState
     @State private var currentPage: OnboardingPage = .welcome
 
+    private let simpleFINService = SimpleFINService()
+    private let keychainService = KeychainService()
+
     var body: some View {
         NavigationStack {
             Group {
@@ -39,8 +42,30 @@ struct OnboardingView: View {
                             }
                         },
                         onSignUp: {
-                            // Will navigate to WebView in P1-T3
-                            print("Sign up for SimpleFIN")
+                            withAnimation {
+                                currentPage = .webView
+                            }
+                        }
+                    )
+
+                case .webView:
+                    SimpleFINWebView(
+                        onTokenDetected: { token in
+                            // Auto-validate and proceed
+                            Task {
+                                await claimAndProceed(token: token)
+                            }
+                        },
+                        onManualPaste: {
+                            // Fall back to token entry
+                            withAnimation {
+                                currentPage = .tokenEntry
+                            }
+                        },
+                        onCancel: {
+                            withAnimation {
+                                currentPage = .tokenEntry
+                            }
                         }
                     )
 
@@ -73,6 +98,27 @@ struct OnboardingView: View {
             ))
         }
     }
+
+    // MARK: - Token Claiming
+
+    private func claimAndProceed(token: String) async {
+        do {
+            let accessURL = try await simpleFINService.claimSetupToken(token)
+            keychainService.saveAccessURL(accessURL)
+            await MainActor.run {
+                withAnimation {
+                    currentPage = .accountDiscovery
+                }
+            }
+        } catch {
+            // On error, fall back to manual token entry
+            await MainActor.run {
+                withAnimation {
+                    currentPage = .tokenEntry
+                }
+            }
+        }
+    }
 }
 
 // MARK: - Onboarding Pages
@@ -80,6 +126,7 @@ struct OnboardingView: View {
 enum OnboardingPage {
     case welcome
     case tokenEntry
+    case webView
     case accountDiscovery
     case classificationReview
 }
