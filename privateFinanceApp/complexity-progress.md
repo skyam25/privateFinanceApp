@@ -7,8 +7,14 @@
 - Technique: Function extraction (buildAccountsURL, buildAuthenticatedRequest, logResponseHeaders, validateFetchResponse, logResponseBody, decodeAccountSet)
 - Tests: PASS
 
-Remaining violations after iteration 1: 7
-- ErrorStateView.swift:281 (complexity 18)
+## Iteration 2
+- Violations found: 7
+- Fixed: ErrorStateView.SyncErrorManager.mapToSyncError function
+- Original complexity: 18 → New: below threshold (removed from violations)
+- Technique: Function extraction (mapNetworkError, mapSimpleFINError, mapFetchFailedError) + case consolidation
+- Tests: PASS
+
+Remaining violations after iteration 2: 6
 - RulesManagementView.swift:214 (complexity 16)
 - RulesManagementView.swift:336 (complexity 16)
 - Transaction.swift:144 (complexity 12)
