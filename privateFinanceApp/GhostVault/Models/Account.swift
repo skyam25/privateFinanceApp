@@ -20,6 +20,9 @@ final class Account {
     var balanceDate: Date?
     var accountTypeRaw: String
     var isHidden: Bool // Whether to exclude from totals
+    var nickname: String? // User-defined display name
+    var previousBalance: String? // Balance from last sync for delta calculation
+    var lastSyncDate: Date? // When the account was last synced
 
     // Computed properties
     var balanceValue: Decimal {
@@ -35,6 +38,15 @@ final class Account {
         AccountType(rawValue: accountTypeRaw) ?? .unknown
     }
 
+    var previousBalanceValue: Decimal? {
+        guard let prev = previousBalance else { return nil }
+        return Decimal(string: prev)
+    }
+
+    var displayName: String {
+        nickname ?? name
+    }
+
     // MARK: - Initialization
 
     init(
@@ -47,7 +59,10 @@ final class Account {
         availableBalance: String? = nil,
         balanceDate: Date? = nil,
         accountTypeRaw: String = "unknown",
-        isHidden: Bool = false
+        isHidden: Bool = false,
+        nickname: String? = nil,
+        previousBalance: String? = nil,
+        lastSyncDate: Date? = nil
     ) {
         self.id = id
         self.organizationId = organizationId
@@ -59,6 +74,9 @@ final class Account {
         self.balanceDate = balanceDate
         self.accountTypeRaw = accountTypeRaw
         self.isHidden = isHidden
+        self.nickname = nickname
+        self.previousBalance = previousBalance
+        self.lastSyncDate = lastSyncDate
     }
 
     // Initialize from SimpleFIN API response

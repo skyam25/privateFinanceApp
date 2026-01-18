@@ -267,7 +267,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Account settings (nickname, hide/show)",
     "Unit test for delta calculation"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

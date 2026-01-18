@@ -59,7 +59,7 @@ struct AccountsView: View {
         }
         .listStyle(.insetGrouped)
         .navigationDestination(for: Account.self) { account in
-            AccountDetailPlaceholder(account: account)
+            AccountDetailView(account: account)
         }
     }
 
@@ -173,22 +173,6 @@ struct AccountRowView: View {
     private var deltaSinceLastSync: String? {
         // Placeholder for delta - will be implemented in P3-T2
         nil
-    }
-}
-
-// MARK: - Account Detail Placeholder (to be replaced in P3-T2)
-
-struct AccountDetailPlaceholder: View {
-    let account: Account
-
-    var body: some View {
-        ContentUnavailableView {
-            Label(account.name, systemImage: account.accountType.iconName)
-        } description: {
-            Text("Account details coming soon")
-        }
-        .navigationTitle(account.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

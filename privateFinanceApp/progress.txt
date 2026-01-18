@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P3 - Account Management
-- **Current Task:** P3-T1 (next)
+- **Current Task:** P3-T3 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -251,11 +251,31 @@ All 4 Dashboard tasks complete. Phase 3 (Account Management) next.
   - SwiftUI previews with sample data and empty state
   - Build and 157 tests pass
 
+### P3-T2: Account Detail View
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Accounts/AccountDetailView.swift
+  - GhostVault/Utilities/AccountBalanceDelta.swift
+  - GhostVaultTests/AccountBalanceDeltaTests.swift (20 tests)
+- Files modified:
+  - GhostVault/Models/Account.swift (added nickname, previousBalance, lastSyncDate, displayName)
+  - GhostVault/Views/Accounts/AccountsView.swift (replaced placeholder with real view)
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - AccountDetailView with balance card, delta indicator, and sparkline chart
+  - AccountBalanceDelta utility for calculating/formatting balance changes
+  - Sparkline using Swift Charts showing balance trend from transactions
+  - Transaction list filtered by account with navigation to full list
+  - Nickname editing with save/cancel
+  - Hide from totals toggle persists to SwiftData
+  - SwiftUI previews for different account types
+  - Build and 177 tests pass
+
 ---
 
 ## In Progress
 
-(P3-T2 next)
+(none)
 
 ---
 
@@ -269,7 +289,7 @@ All 4 Dashboard tasks complete. Phase 3 (Account Management) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 12 (P0 complete, P1 complete, P2 complete)
+- Completed: 13 (P0 complete, P1 complete, P2 complete, P3-T1, P3-T2)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 157 passing
+- Total tests: 177 passing
