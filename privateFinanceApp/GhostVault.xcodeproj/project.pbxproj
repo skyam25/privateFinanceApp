@@ -54,6 +54,7 @@
 		MDL003 /* ClassificationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMDL003; };
 		MOD006 /* DailySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD006; };
 		MOD007 /* MonthlySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCMOD007; };
+		VW017 /* NetWorthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCVW017; };
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
@@ -129,6 +130,7 @@
 		SRCVW015 /* TransactionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailSheet.swift; sourceTree = "<group>"; };
 		SRCUTL005 /* TransactionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilter.swift; sourceTree = "<group>"; };
 		SRCVW016 /* TransactionFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterSheet.swift; sourceTree = "<group>"; };
+		SRCVW017 /* NetWorthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorthChartView.swift; sourceTree = "<group>"; };
 		SRCUTL006 /* TransferDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDetector.swift; sourceTree = "<group>"; };
 		SRCUTL007 /* IncomeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeDetector.swift; sourceTree = "<group>"; };
 		SRCUTL008 /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				GRPVWSET /* Settings */,
 				GRPVWONB /* Onboarding */,
 				GRPVWCOMP /* Components */,
+				GRPVWCHRT /* Charts */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,14 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		GRPVWCHRT /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				SRCVW017 /* NetWorthChartView.swift */,
+			);
+			path = Charts;
 			sourceTree = "<group>";
 		};
 		GRPMODELS /* Models */ = {
@@ -477,6 +488,7 @@
 				MDL003 /* ClassificationRule.swift in Sources */,
 				MOD006 /* DailySnapshot.swift in Sources */,
 				MOD007 /* MonthlySnapshot.swift in Sources */,
+				VW017 /* NetWorthChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

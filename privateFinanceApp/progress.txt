@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P6 - Trend Charts (In Progress)
-- **Current Task:** P6-T2 next
+- **Current Task:** P6-T3 next
 - **Last Updated:** 2026-01-18
 
 ---
@@ -424,6 +424,24 @@ All 3 Business Logic tasks complete. Phase 6 (Trend Charts) next.
   - Date normalization for DailySnapshot to startOfDay
   - Build and 354 tests pass
 
+### P6-T2: Net Worth Line Chart
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Charts/NetWorthChartView.swift
+- Files modified:
+  - GhostVault/Views/Dashboard/NetWorthCard.swift (added navigation to chart)
+  - GhostVault.xcodeproj/project.pbxproj (added Charts group and file)
+- Notes:
+  - NetWorthChartView with Swift Charts line graph
+  - ChartTimeframe enum for 1M, 3M, YTD, 1Y, Custom timeframes
+  - NetWorthDataPoint struct for chart data
+  - Custom date picker sheet for flexible ranges
+  - Touch interaction to select data points
+  - Period summary card showing start/end values and change
+  - Navigation from NetWorthCard via "View Trend Chart" button
+  - SwiftUI previews with sample data (3-month and 1-month)
+  - Build and 354 tests pass
+
 ---
 
 ## In Progress
@@ -442,7 +460,7 @@ All 3 Business Logic tasks complete. Phase 6 (Trend Charts) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 21 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5 complete, P6-T1 complete)
+- Completed: 22 (P0 complete, P1 complete, P2 complete, P3 complete, P4 complete, P5 complete, P6-T1 complete, P6-T2 complete)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 354 passing

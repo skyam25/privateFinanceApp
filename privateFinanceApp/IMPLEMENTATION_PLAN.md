@@ -403,7 +403,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Snapshots created/updated on each sync",
     "Unit tests for snapshot creation"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 
@@ -419,7 +419,7 @@ Break down the PRD MVP into iterative Ralph Loop tasks with built-in testing and
     "Accessible from Dashboard Net Worth card",
     "SwiftUI preview with sample data"
   ],
-  "passes": false
+  "passes": true
 }
 ```
 

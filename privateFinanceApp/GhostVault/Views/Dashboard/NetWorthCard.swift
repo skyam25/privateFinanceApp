@@ -14,6 +14,7 @@ struct NetWorthCard: View {
 
     @State private var isExpanded = false
     @State private var previousNetWorth: Decimal? = nil
+    @State private var showChart = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -128,9 +129,31 @@ struct NetWorthCard: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+
+            Divider()
+                .padding(.vertical, 8)
+
+            // View Trend Chart button
+            Button {
+                showChart = true
+            } label: {
+                HStack {
+                    Image(systemName: "chart.line.uptrend.xyaxis")
+                    Text("View Trend Chart")
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                .foregroundStyle(.accent)
+            }
+            .buttonStyle(.plain)
         }
         .padding(.top, 12)
         .font(.subheadline)
+        .navigationDestination(isPresented: $showChart) {
+            NetWorthChartView()
+        }
     }
 
     // MARK: - Computed Properties
