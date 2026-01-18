@@ -1,8 +1,8 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P2 - Dashboard (Core Feature)
-- **Current Task:** P2-T4 (next)
+- **Phase:** P3 - Account Management
+- **Current Task:** P3-T1 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -217,9 +217,29 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 ---
 
+### P2-T4: Dashboard Assembly
+- Status: COMPLETE
+- Files modified:
+  - GhostVault/Views/Dashboard/DashboardView.swift
+- Notes:
+  - Assembles NetWorthCard, NetMonthlyIncomeCard, and SyncStatusBar
+  - Pull-to-refresh triggers SimpleFIN sync
+  - SyncStatusBar pinned to bottom with material background
+  - Rate limiter resets on appear
+  - Preview with sample account and transaction data
+  - Build and 157 tests pass
+
+---
+
+## Phase 2 Complete - 2026-01-18
+
+All 4 Dashboard tasks complete. Phase 3 (Account Management) next.
+
+---
+
 ## In Progress
 
-(P2-T4 next)
+(P3-T1 next)
 
 ---
 
@@ -233,7 +253,7 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 11 (P0 complete, P1 complete, P2-T1, P2-T2, P2-T3)
+- Completed: 12 (P0 complete, P1 complete, P2 complete)
 - Phases: P0-P9
 - Simulator: iPhone 17
 - Total tests: 157 passing
