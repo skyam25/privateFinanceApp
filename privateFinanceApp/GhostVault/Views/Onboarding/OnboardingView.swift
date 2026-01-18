@@ -84,14 +84,16 @@ struct OnboardingView: View {
                     )
 
                 case .classificationReview:
-                    // Placeholder until P1-T5
-                    ClassificationReviewPlaceholderView {
-                        appState.isOnboarded = true
-                    } onBack: {
-                        withAnimation {
-                            currentPage = .accountDiscovery
+                    ClassificationReviewView(
+                        onComplete: {
+                            appState.isOnboarded = true
+                        },
+                        onBack: {
+                            withAnimation {
+                                currentPage = .accountDiscovery
+                            }
                         }
-                    }
+                    )
                 }
             }
             .transition(.asymmetric(
@@ -131,38 +133,6 @@ enum OnboardingPage {
     case webView
     case accountDiscovery
     case classificationReview
-}
-
-// MARK: - Placeholder Views (to be replaced in subsequent tasks)
-
-private struct ClassificationReviewPlaceholderView: View {
-    let onContinue: () -> Void
-    let onBack: () -> Void
-
-    var body: some View {
-        VStack(spacing: 24) {
-            Spacer()
-            Image(systemName: "tag.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.accent)
-            Text("Review Transactions")
-                .font(.title2.bold())
-            Text("Classification review screen coming in P1-T5")
-                .foregroundStyle(.secondary)
-            Spacer()
-            Button("Continue to Dashboard", action: onContinue)
-                .buttonStyle(.borderedProminent)
-        }
-        .padding()
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: onBack) {
-                    Image(systemName: "chevron.left")
-                }
-            }
-        }
-    }
 }
 
 // MARK: - Preview

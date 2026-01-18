@@ -1,9 +1,9 @@
 # GhostVault Implementation Progress
 
 ## Current Status
-- **Phase:** P1 - Onboarding Flow
-- **Current Task:** P1-T5 (next)
-- **Last Updated:** 2026-01-17
+- **Phase:** P2 - Dashboard (Core Feature)
+- **Current Task:** P2-T1 (next)
+- **Last Updated:** 2026-01-18
 
 ---
 
@@ -130,13 +130,36 @@ All test infrastructure is in place with 77 passing tests.
   - AccountFilter utility with filtering, grouping, and balance calculation
   - Saves accounts to SwiftData on continue
   - Loading and error states
-  - Build and 106 tests pass
+  - Build and 101 tests pass
+
+### P1-T5: Initial Classification Review
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Views/Onboarding/ClassificationReviewView.swift
+- Files modified:
+  - GhostVault/Views/Onboarding/OnboardingView.swift (uses real ClassificationReviewView)
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - Fetches past month transactions from SimpleFIN
+  - TransactionClassifier auto-detects patterns (payroll, transfers, groceries, dining, etc.)
+  - Highlighted section for high-confidence detected patterns
+  - Category picker for each transaction
+  - "Apply to all from [payee]" context menu and sheet
+  - Saves ReviewableTransactions to SwiftData as Transaction models
+  - "Continue to Dashboard" completes onboarding (sets appState.isOnboarded = true)
+  - Build and 101 tests pass
+
+---
+
+## Phase 1 Complete - 2026-01-17
+
+All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 ---
 
 ## In Progress
 
-(P1-T5 next)
+(P2-T1 next)
 
 ---
 
@@ -150,7 +173,7 @@ All test infrastructure is in place with 77 passing tests.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 7 (P0 complete, P1-T1, P1-T2, P1-T3, P1-T4)
+- Completed: 8 (P0 complete, P1 complete)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 106 passing
+- Total tests: 101 passing
