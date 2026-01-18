@@ -70,16 +70,18 @@ struct OnboardingView: View {
                     )
 
                 case .accountDiscovery:
-                    // Placeholder until P1-T4
-                    AccountDiscoveryPlaceholderView {
-                        withAnimation {
-                            currentPage = .classificationReview
+                    AccountDiscoveryView(
+                        onContinue: {
+                            withAnimation {
+                                currentPage = .classificationReview
+                            }
+                        },
+                        onBack: {
+                            withAnimation {
+                                currentPage = .tokenEntry
+                            }
                         }
-                    } onBack: {
-                        withAnimation {
-                            currentPage = .tokenEntry
-                        }
-                    }
+                    )
 
                 case .classificationReview:
                     // Placeholder until P1-T5
@@ -132,36 +134,6 @@ enum OnboardingPage {
 }
 
 // MARK: - Placeholder Views (to be replaced in subsequent tasks)
-
-private struct AccountDiscoveryPlaceholderView: View {
-    let onContinue: () -> Void
-    let onBack: () -> Void
-
-    var body: some View {
-        VStack(spacing: 24) {
-            Spacer()
-            Image(systemName: "building.columns.fill")
-                .font(.system(size: 60))
-                .foregroundStyle(.accent)
-            Text("Your Accounts")
-                .font(.title2.bold())
-            Text("Account discovery screen coming in P1-T4")
-                .foregroundStyle(.secondary)
-            Spacer()
-            Button("Continue", action: onContinue)
-                .buttonStyle(.borderedProminent)
-        }
-        .padding()
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: onBack) {
-                    Image(systemName: "chevron.left")
-                }
-            }
-        }
-    }
-}
 
 private struct ClassificationReviewPlaceholderView: View {
     let onContinue: () -> Void

@@ -19,6 +19,7 @@ final class Account {
     var availableBalance: String?
     var balanceDate: Date?
     var accountTypeRaw: String
+    var isHidden: Bool // Whether to exclude from totals
 
     // Computed properties
     var balanceValue: Decimal {
@@ -45,7 +46,8 @@ final class Account {
         balance: String,
         availableBalance: String? = nil,
         balanceDate: Date? = nil,
-        accountTypeRaw: String = "unknown"
+        accountTypeRaw: String = "unknown",
+        isHidden: Bool = false
     ) {
         self.id = id
         self.organizationId = organizationId
@@ -56,6 +58,7 @@ final class Account {
         self.availableBalance = availableBalance
         self.balanceDate = balanceDate
         self.accountTypeRaw = accountTypeRaw
+        self.isHidden = isHidden
     }
 
     // Initialize from SimpleFIN API response
