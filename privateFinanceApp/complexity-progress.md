@@ -42,5 +42,15 @@
 - Technique: Consolidated identical return cases into single comma-separated case arm
 - Tests: PASS
 
-Remaining violations after iteration 6: 1
-- ClassificationReviewView.swift:339 (complexity 11)
+## Iteration 7
+- Violations found: 1
+- Fixed: ClassificationReviewView.swift - TransactionRowView.categoryIcon(for:)
+- Original complexity: 11 → New: 2 (below threshold)
+- Technique: Static dictionary lookup (categoryIconMap) replacing switch statement
+- Tests: PASS
+
+## COMPLETE
+All cyclomatic complexity violations resolved.
+- Started with: 8 violations
+- Fixed: 8 violations across 7 iterations
+- Remaining: 0 violations

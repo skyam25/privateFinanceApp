@@ -182,7 +182,7 @@ struct ClassificationReviewView: View {
                 var allTransactions: [ReviewableTransaction] = []
 
                 for account in accountSet.accounts {
-                    for apiTransaction in account.transactions {
+                    for apiTransaction in account.transactions ?? [] {
                         let classification = classifier.classify(apiTransaction)
                         allTransactions.append(ReviewableTransaction(
                             id: apiTransaction.id,
@@ -336,20 +336,22 @@ private struct TransactionRow: View {
         }
     }
 
+    private static let categoryIconMap: [String: String] = [
+        "income": "arrow.down.circle.fill",
+        "groceries": "cart.fill",
+        "dining": "fork.knife",
+        "shopping": "bag.fill",
+        "transportation": "car.fill",
+        "bills": "doc.text.fill",
+        "entertainment": "tv.fill",
+        "health": "heart.fill",
+        "travel": "airplane",
+        "transfer": "arrow.left.arrow.right"
+    ]
+
     private func categoryIcon(for category: String?) -> String {
-        switch category?.lowercased() {
-        case "income": return "arrow.down.circle.fill"
-        case "groceries": return "cart.fill"
-        case "dining": return "fork.knife"
-        case "shopping": return "bag.fill"
-        case "transportation": return "car.fill"
-        case "bills": return "doc.text.fill"
-        case "entertainment": return "tv.fill"
-        case "health": return "heart.fill"
-        case "travel": return "airplane"
-        case "transfer": return "arrow.left.arrow.right"
-        default: return "questionmark.circle"
-        }
+        guard let cat = category?.lowercased() else { return "questionmark.circle" }
+        return Self.categoryIconMap[cat] ?? "questionmark.circle"
     }
 
     private func formatAmount(_ amount: String) -> String {
