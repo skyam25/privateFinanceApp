@@ -33,6 +33,9 @@
 
 		/* Test Files */
 		TST001 /* GhostVaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST001; };
+		TST002 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST002; };
+		TST003 /* TransactionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST003; };
+		TST004 /* CategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = SRCTST004; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 
 		/* Test Files */
 		SRCTST001 /* GhostVaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostVaultTests.swift; sourceTree = "<group>"; };
+		SRCTST002 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		SRCTST003 /* TransactionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
+		SRCTST004 /* CategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -113,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				SRCTST001 /* GhostVaultTests.swift */,
+				SRCTST002 /* AccountTests.swift */,
+				SRCTST003 /* TransactionTests.swift */,
+				SRCTST004 /* CategoryTests.swift */,
 			);
 			path = GhostVaultTests;
 			sourceTree = "<group>";
@@ -348,6 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				TST001 /* GhostVaultTests.swift in Sources */,
+				TST002 /* AccountTests.swift in Sources */,
+				TST003 /* TransactionTests.swift in Sources */,
+				TST004 /* CategoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P0 - Test Infrastructure
-- **Current Task:** P0-T2
+- **Current Task:** P0-T3
 - **Last Updated:** 2026-01-17
 
 ---
@@ -26,13 +26,28 @@
   - App now uses local SwiftData storage by default
   - Build and tests pass on iPhone 17 simulator
 
+### P0-T2: Model Unit Tests
+- Status: COMPLETE
+- Files created:
+  - GhostVaultTests/AccountTests.swift (16 tests)
+  - GhostVaultTests/TransactionTests.swift (21 tests)
+  - GhostVaultTests/CategoryTests.swift (23 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj (added test files)
+- Tests added: 60 total
+- Notes:
+  - AccountTests: balance value parsing, available balance, account type classification
+  - TransactionTests: amount parsing, category icons for all categories, initialization
+  - CategoryTests: pattern matching (contains, startsWith, endsWith, regex), field matching, Color extension, Codable/Hashable conformance
+  - All 62 tests pass
+
 ---
 
 ## In Progress
 
-### P0-T2: Model Unit Tests
+### P0-T3: SimpleFIN Service Tests
 - Started: 2026-01-17
-- Current step: Writing unit tests for Account, Transaction, Category models
+- Current step: Writing unit tests for SimpleFINService with mocked responses
 
 ---
 
