@@ -2,7 +2,7 @@
 
 ## Current Status
 - **Phase:** P2 - Dashboard (Core Feature)
-- **Current Task:** P2-T3 (next)
+- **Current Task:** P2-T4 (next)
 - **Last Updated:** 2026-01-18
 
 ---
@@ -197,9 +197,29 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 ---
 
+### P2-T3: Sync Status Bar
+- Status: COMPLETE
+- Files created:
+  - GhostVault/Utilities/SyncRateLimiter.swift
+  - GhostVault/Views/Dashboard/SyncStatusBar.swift
+  - GhostVaultTests/SyncRateLimiterTests.swift (17 tests)
+- Files modified:
+  - GhostVault.xcodeproj/project.pbxproj
+- Notes:
+  - SyncRateLimiter tracks 24 syncs per 24 hours
+  - Auto-reset after 24 hours
+  - Last sync time and time until reset formatting
+  - SyncStatusBar shows last sync time, remaining syncs
+  - Sync Now button with loading state
+  - Rate limit color indicator (red/orange when low)
+  - SwiftUI previews for different states
+  - Build and 157 tests pass
+
+---
+
 ## In Progress
 
-(P2-T3 next)
+(P2-T4 next)
 
 ---
 
@@ -213,7 +233,7 @@ All 5 onboarding tasks complete. Phase 2 (Dashboard) next.
 
 - Plan file: IMPLEMENTATION_PLAN.md
 - Total tasks: 31
-- Completed: 10 (P0 complete, P1 complete, P2-T1, P2-T2)
+- Completed: 11 (P0 complete, P1 complete, P2-T1, P2-T2, P2-T3)
 - Phases: P0-P9
 - Simulator: iPhone 17
-- Total tests: 140 passing
+- Total tests: 157 passing
